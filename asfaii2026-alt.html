@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJHVL0YRRK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YJHVL0YRRK');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unofficial Guide — 2026 ASFA International Invitational</title>
+    <meta name="description" content="Unofficial community guide to the 48th ASFA International Invitational — October 24 & 25, 2026, Couch Ranch, Vinita, OK. Event info, stakes, entries, schedule, awards and logistics summarized from the official premium list. Not an ASFA publication.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Color Palette Configuration (help-center theme: sand, stone, cream, flame) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hc: {
+                            sand: '#DED4BE',     // Page background (warm sand)
+                            stone: '#928C7D',    // Nav band (stone/taupe)
+                            cream: '#F8F4EB',    // Card background
+                            ink: '#3C3C3C',      // Body text
+                            deep: '#222222',     // Headings
+                            blue: '#336699',     // Links (steel blue)
+                            flame: '#FF3300',    // Accent (burning orange)
+                            flameDark: '#CC2900',// Accent hover
+                            navy: '#1B3041',     // Footer
+                            bar: '#1A1A1A',      // Top wordmark bar
+                            line: '#D8D2C2'      // Warm dividers
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts & Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+        h1, h2, h3, .font-abel, .tab-btn { font-family: 'Abel', sans-serif; }
+        /* Cream section card (help-center convention: flat, square corners) */
+        .card { background: #F8F4EB; padding: 1.25rem; }
+        .card-title {
+            font-family: 'Abel', sans-serif;
+            font-size: 1.375rem;
+            line-height: 1.2;
+            color: #222222;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.75rem;
+        }
+        .card-title i { color: #FF3300; font-size: 1rem; }
+        /* Tab buttons — uppercase white on the stone band */
+        .tab-btn {
+            white-space: nowrap;
+            padding: 0.8rem 1.1rem;
+            font-size: 1rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #fff;
+            border-bottom: 3px solid transparent;
+            transition: background-color .15s, border-color .15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .tab-btn:hover { background: rgba(0,0,0,.25); }
+        .tab-btn[aria-selected="true"] {
+            background: rgba(0,0,0,.45);
+            border-bottom-color: #FF3300;
+        }
+        .tab-btn:focus-visible { outline: 2px solid #FF3300; outline-offset: -2px; }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; animation: fadeIn .25s ease both; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+        /* Data tables */
+        table.data { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+        table.data th, table.data td {
+            text-align: left;
+            padding: 0.55rem 0.75rem;
+            border-bottom: 1px solid #D8D2C2;
+            vertical-align: top;
+        }
+        table.data thead th {
+            background: #928C7D;
+            color: #fff;
+            font-family: 'Abel', sans-serif;
+            font-weight: 400;
+            font-size: 0.9375rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        table.data tbody td { background: #fff; }
+        table.data tbody tr:nth-child(even) td { background: #FCFAF4; }
+        table.data tbody tr:last-child td { border-bottom: none; }
+        /* Emphasize the perpetual-trophy names (Saturday & Sunday columns) */
+        table.trophy-names tbody td:nth-child(n+2) { font-weight: 700; color: #222222; }
+        /* Emphasize donation/sponsorship item names (first column) */
+        table.donation-items tbody td:first-child { font-weight: 700; color: #222222; }
+        .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        /* Footer disclaimer disclosure */
+        #disclaimer details > summary {
+            cursor: pointer;
+            list-style: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        #disclaimer details > summary::-webkit-details-marker { display: none; }
+        #disclaimer details > summary .chev { transition: transform .2s ease; }
+        #disclaimer details[open] > summary .chev { transform: rotate(180deg); }
+        @media print {
+            .print\:hidden { display: none !important; }
+            .tab-panel { display: block !important; }
+        }
+    </style>
+</head>
+<body class="bg-hc-sand text-hc-ink antialiased flex flex-col min-h-screen">
+    <!-- Unofficial notice banner (always visible) -->
+    <div class="bg-hc-flame text-white text-center text-sm font-semibold px-4 py-2">
+        <i class="fa-solid fa-circle-info mr-1.5"></i>Unofficial community guide — not an ASFA publication.
+        Official premium list and entries at <a href="https://www.asfa.org" class="underline hover:text-hc-cream">asfa.org</a>.
+        <a href="#disclaimer" class="underline hover:text-hc-cream whitespace-nowrap">Full disclaimer</a>
+    </div>
+    <!-- Wordmark bar -->
+    <div class="bg-hc-bar text-white print:hidden">
+        <div class="max-w-[1160px] mx-auto px-4 py-3 text-center">
+            <a href="https://www.asfa.org" class="font-abel uppercase tracking-[0.35em] text-lg hover:text-hc-sand transition">ASFA.org</a>
+        </div>
+    </div>
+    <!-- Photo hero -->
+    <header class="relative bg-hc-navy text-white">
+        <img src="hero-field.jpg" alt="Exhibitors, hounds and vehicles along the gallery at a lure coursing field" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="relative max-w-[1160px] mx-auto px-4 py-16 sm:py-20 text-center">
+            <p class="font-abel uppercase tracking-[0.25em] text-hc-cream text-sm mb-3">Unofficial Entrant's Guide</p>
+            <h1 class="text-4xl sm:text-5xl leading-tight">48th ASFA International Invitational</h1>
+            <p class="mt-3 text-lg sm:text-xl">
+                <i class="fa-regular fa-calendar-days mr-2"></i>Saturday, October 24 &amp; Sunday, October 25, 2026
+            </p>
+            <p class="mt-1 text-hc-cream">
+                <i class="fa-solid fa-location-dot mr-2"></i><a href="https://maps.app.goo.gl/cctAXmPReZF3Q9PV9" target="_blank" rel="noopener noreferrer" class="hover:underline">Couch Ranch · 24512 S. 4350 Rd., Vinita, OK 74301</a>
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3 justify-center">
+                <a href="https://form.jotform.com/261315749736162" target="_blank" rel="noopener noreferrer"
+                   class="font-abel uppercase tracking-wider inline-flex items-center gap-2 bg-hc-flame hover:bg-hc-flameDark text-white px-5 py-2.5 shadow transition">
+                    <i class="fa-solid fa-pen-to-square"></i> Enter Online
+                </a>
+                <a href="https://asfa.org/event/premiums/2026%20ASFA%20II%20Premium%20Final%20Final.pdf" target="_blank" rel="noopener noreferrer"
+                   class="font-abel uppercase tracking-wider inline-flex items-center gap-2 bg-white text-hc-blue hover:bg-hc-cream px-5 py-2.5 shadow transition">
+                    <i class="fa-solid fa-file-pdf"></i> Download Official Premium List
+                </a>
+                <span class="font-abel uppercase tracking-wider inline-flex items-center gap-2 border border-white/60 text-white px-4 py-2 text-sm">
+                    <i class="fa-regular fa-clock"></i> Entries close 25 Sept 2026
+                </span>
+            </div>
+        </div>
+        <p class="absolute bottom-1.5 right-3 text-[11px] text-white/80">Photo: Peri Ann Taylor</p>
+    </header>
+    <!-- Sticky Tab Bar (stone band) -->
+    <nav id="tab-nav" class="bg-hc-stone sticky top-0 z-40 shadow print:hidden">
+        <div class="max-w-[1160px] mx-auto px-3 sm:px-2">
+            <!-- Mobile: section dropdown -->
+            <div class="sm:hidden py-2.5">
+                <label for="tab-select" class="sr-only">Jump to section</label>
+                <div class="relative">
+                    <select id="tab-select" class="w-full appearance-none bg-white border border-hc-line py-2.5 pl-3 pr-10 text-sm font-semibold text-hc-deep focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                        <option value="info">Event Info</option>
+                        <option value="stakes">Stakes</option>
+                        <option value="entries">Entries &amp; Fees</option>
+                        <option value="schedule">Fields &amp; Judges</option>
+                        <option value="awards">Awards &amp; Trophies</option>
+                        <option value="logistics">Plan Your II Trip</option>
+                        <option value="forms">Forms &amp; Links</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-hc-stone text-xs"></i>
+                </div>
+            </div>
+            <!-- sm and up: horizontal tabs -->
+            <div class="hidden sm:block table-scroll">
+                <div role="tablist" aria-label="Guide sections" class="flex min-w-max">
+                    <button class="tab-btn" role="tab" id="tab-info"      aria-controls="panel-info"      aria-selected="true"  tabindex="0"  data-tab="info"><i class="fa-solid fa-circle-info"></i>Event Info</button>
+                    <button class="tab-btn" role="tab" id="tab-stakes"    aria-controls="panel-stakes"    aria-selected="false" tabindex="-1" data-tab="stakes"><i class="fa-solid fa-trophy"></i>Stakes</button>
+                    <button class="tab-btn" role="tab" id="tab-entries"   aria-controls="panel-entries"   aria-selected="false" tabindex="-1" data-tab="entries"><i class="fa-solid fa-pen-to-square"></i>Entries &amp; Fees</button>
+                    <button class="tab-btn" role="tab" id="tab-schedule"  aria-controls="panel-schedule"  aria-selected="false" tabindex="-1" data-tab="schedule"><i class="fa-solid fa-flag-checkered"></i>Fields &amp; Judges</button>
+                    <button class="tab-btn" role="tab" id="tab-awards"    aria-controls="panel-awards"    aria-selected="false" tabindex="-1" data-tab="awards"><i class="fa-solid fa-award"></i>Awards &amp; Trophies</button>
+                    <button class="tab-btn" role="tab" id="tab-logistics" aria-controls="panel-logistics" aria-selected="false" tabindex="-1" data-tab="logistics"><i class="fa-solid fa-campground"></i>Plan Your II Trip</button>
+                    <button class="tab-btn" role="tab" id="tab-forms"     aria-controls="panel-forms"     aria-selected="false" tabindex="-1" data-tab="forms"><i class="fa-solid fa-link"></i>Forms &amp; Links</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- White content panel on sand -->
+    <div class="flex-1 w-full">
+        <main class="max-w-[1160px] w-full mx-auto bg-white px-4 sm:px-8 py-8">
+        <!-- ============ TAB 1: EVENT INFO ============ -->
+        <section id="panel-info" class="tab-panel active" role="tabpanel" aria-labelledby="tab-info">
+            <h2 class="sr-only">Event Info</h2>
+            <div class="grid md:grid-cols-2 gap-5">
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-calendar-check"></i>The Event</h3>
+                    <div class="space-y-2 text-[15px] leading-relaxed">
+                        <p><strong>48th ASFA International Invitational</strong> — an ASFA All-Breed Lure Trial.</p>
+                        <p><i class="fa-regular fa-calendar w-5 text-hc-stone"></i> Saturday, October 24 &amp; Sunday, October 25, 2026</p>
+                        <p><i class="fa-solid fa-location-dot w-5 text-hc-stone"></i> <a href="https://maps.app.goo.gl/cctAXmPReZF3Q9PV9" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">Couch Ranch, 24512 S. 4350 Rd., Vinita, OK 74301</a> (Region 4)</p>
+                        <p><i class="fa-solid fa-building-flag w-5 text-hc-stone"></i> Host: American Sighthound Field Association</p>
+                        <p class="text-xs text-hc-ink/70 pt-1">Permission granted by ASFA for the holding of this event under ASFA rules and regulations. Scheduling Committee Chair: Samantha Duryee.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-regular fa-clock"></i>Trial Hours</h3>
+                    <div class="space-y-2 text-[15px] leading-relaxed">
+                        <p><strong>Trial hours (Central Daylight Time):</strong> 5:30 AM until completion.</p>
+                        <p><strong>Roll call &amp; inspection:</strong> promptly at 6:00 AM — <span class="font-semibold text-hc-flame">ALL DOGS, NO EXCEPTIONS.</span></p>
+                        <p>Workers' hounds accepted for early inspection upon arrival, beginning one half hour before roll call.</p>
+                        <p>Stakes split into tentative flights Friday, October 23 at 5:30 PM at the field.</p>
+                    </div>
+                </div>
+                <div class="card md:col-span-2">
+                    <h3 class="card-title"><i class="fa-solid fa-circle-check"></i>Eligibility (Overview)</h3>
+                    <div class="space-y-2 text-[15px] leading-relaxed">
+                        <p>To be eligible, a hound must — prior to the close of entries (25 September) — have:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Earned at least <strong>20 lifetime ASFA points</strong> (or equivalent in its country of residence); <em>or</em></li>
+                            <li>Be an AKC (or equivalent foreign) Field Champion of Record in another lure-coursing sanctioning organization; <em>or</em></li>
+                            <li>Have placed in a Regional Invitational (with competition).</li>
+                        </ul>
+                        <p>Singles and LCI entrants must have earned 20 lifetime ASFA points. Entrants in <strong>breed stakes</strong> must have earned the 20 points running against competition <em>in their specific breed's stake</em> — points earned in Singles do not count toward breed-stake eligibility. Provisional Stake entries need one 1st placement or two 2nd placements (with competition) in the Provisional Stake.</p>
+                        <p class="text-xs text-hc-ink/70">Full eligibility, registry and proof requirements are in the <a href="#" data-goto="stakes" class="text-hc-flame font-semibold hover:underline">Stakes</a> tab and the official premium PDF.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-address-book"></i>Key Contacts</h3>
+                    <div class="space-y-3 text-[15px] leading-relaxed">
+                        <div>
+                            <p class="font-semibold text-hc-deep">Field Trial Secretary</p>
+                            <p>Jennifer Gysler</p>
+                            <p><a href="tel:8184004812" class="text-hc-blue hover:underline">818.400.4812</a> · <a href="mailto:Jennifer.DogShowEntries@gmail.com" class="text-hc-blue hover:underline">Jennifer.DogShowEntries@gmail.com</a></p>
+                            <p class="text-xs text-hc-ink/70">Available by phone or text before 9:00 PM Pacific.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-hc-deep">Field Trial Chair</p>
+                            <p>Scott Hurlbert</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-hc-deep">Mobile phones at the field</p>
+                            <p>Scott <a href="tel:9139075361" class="text-hc-blue hover:underline">913.907.5361</a> · Jennifer <a href="tel:8184004812" class="text-hc-blue hover:underline">818.400.4812</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-kit-medical"></i>Emergency Veterinarians</h3>
+                    <div class="space-y-3 text-[15px] leading-relaxed">
+                        <div>
+                            <p class="font-semibold">Animal Medical Center — Claremore, OK</p>
+                            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=1711%20N%20Lynn%20Riggs%20Blvd%2C%20Claremore%2C%20OK%2074017" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">1711 N Lynn Riggs Blvd, Claremore, OK 74017</a></p>
+                            <p>On call: <a href="tel:9183414635" class="text-hc-blue hover:underline">918-341-4635</a> · <a href="https://www.amcclaremore.com/" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">website</a></p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Fairland Veterinary Hospital — Fairland, OK</p>
+                            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=56520%20US-60%2C%20Fairland%2C%20OK%2074343" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">56520 US-60, Fairland, OK 74343</a></p>
+                            <p><a href="tel:9186763235" class="text-hc-blue hover:underline">918-676-3235</a></p>
+                        </div>
+                        <p class="text-xs text-hc-ink/70">Please verify hours/availability directly before traveling.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-people-group"></i>Field Committee</h3>
+                    <div class="text-[15px] leading-relaxed">
+                        <ul class="space-y-1">
+                            <li><strong>Field Trial Chair:</strong> Scott Hurlbert</li>
+                            <li><strong>Trial Secretary:</strong> Jennifer Gysler</li>
+                            <li><strong>Head Huntmaster:</strong> Stuart Hamilton</li>
+                            <li><strong>Lure Operators:</strong> Tom Golcher, Dan Heidel, Danny Couch, Russ Buhrdorf</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ TAB 2: STAKES ============ -->
+        <section id="panel-stakes" class="tab-panel" role="tabpanel" aria-labelledby="tab-stakes">
+            <h2 class="sr-only">Stakes</h2>
+            <div class="space-y-5">
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-trophy"></i>Regular Stakes Offered</h3>
+                    <div class="space-y-3 text-[15px] leading-relaxed">
+                        <p><span class="font-abel text-lg text-hc-deep">Open —</span> Any eligible sighthound that has met certification requirements and earned 20 lifetime ASFA points (or equivalent / FCh of record elsewhere / placed in a Regional Invitational) prior to the close of entries. Hounds that have earned an ASFA Field Championship are <em>not</em> eligible for Open.</p>
+                        <p><span class="font-abel text-lg text-hc-deep">Field Champion (FCh) —</span> Any ASFA Field Champion.</p>
+                        <p><span class="font-abel text-lg text-hc-deep">Veteran —</span> Any hound eligible for Open or FCh that meets the breed age minimum: <strong>6 yrs</strong> (default), <strong>5 yrs</strong> for Irish Wolfhounds, and <strong>7 yrs</strong> for Afghan Hounds, Ibizan Hounds, Rhodesian Ridgebacks, Salukis &amp; Whippets.</p>
+                        <p><span class="font-abel text-lg text-hc-deep">Provisional —</span> Any sighthound of an eligible provisional breed with one 1st placement or two 2nd placements (with competition) in the Provisional Stake. Not eligible for Best of Breed or Best in Field.</p>
+                        <p><span class="font-abel text-lg text-hc-deep">Singles —</span> Any hound otherwise eligible for regular/provisional stakes — including hounds with breed or competition disqualifications. Runs alone twice. Not eligible for BOB or BIF. Eligible to earn TCP and CPS titles (provisional breeds excluded from these titles).</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-dog"></i>Lure Chasing Instinct (LCI) Stake</h3>
+                    <div class="space-y-3 text-[15px] leading-relaxed">
+                        <p>Open to <strong>non-sighthounds and sighthound mixes</strong> that have earned 20 lifetime ASFA points. Must be individually registered (AKC incl. ILP/PAL, UKC, or ASFA number).</p>
+                        <div class="table-scroll">
+                            <table class="data">
+                                <thead><tr><th>Group</th><th>Open</th><th>Excellent</th><th>Veteran</th></tr></thead>
+                                <tbody>
+                                    <tr><td><strong>Small</strong> (≤17½" and/or brachycephalic)</td><td>Has not achieved LCC</td><td>Has achieved LCC</td><td>Over age 7</td></tr>
+                                    <tr><td><strong>Large</strong> (over 17½")</td><td>Has not achieved LCC</td><td>Has achieved LCC</td><td>Over age 7</td></tr>
+                                    <tr><td><strong>Sighthound Mix</strong></td><td>Has not achieved LCC</td><td>Has achieved LCC</td><td>Over age 7</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-xs text-hc-ink/70">No hound certifications will be offered this weekend.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-people-arrows"></i>Non-Regular Stakes (LCI &amp; Singles not eligible)</h3>
+                    <div class="space-y-3 text-[15px] leading-relaxed">
+                        <p><span class="font-abel text-lg text-hc-deep">Breeder Stake —</span> Two hounds bred or co-bred by the same individual. Both must be entered in a regular stake (Open, FCh, Veteran). Combined scores; highest wins the Breeder Stake Award.</p>
+                        <p><span class="font-abel text-lg text-hc-deep">Kennel Stake —</span> Two hounds owned and living with the same person. Both must be entered in a regular stake. Combined scores; highest wins.</p>
+                        <p><span class="font-abel text-lg text-hc-deep">Generation Stake —</span> A stud dog <em>or</em> brood bitch plus one offspring of that dog. Both entered in a regular stake (need not be owned/bred by the same person). Each parent pairs with one chosen offspring; an offspring may pair with one or both parents.</p>
+                        <p><span class="font-abel text-lg text-hc-deep">Bench Champion Stake —</span> For any hound eligible for a regular stake that is an AKC, CKC, or ASFA-approved international show champion of record. A copy of the championship certificate must accompany each entry. ASFA does not recognize the UKC show champion as of Jan. 1, 2022.</p>
+                        <p class="text-xs text-hc-ink/70">For Breeder &amp; Kennel: entries may be the identical pairing, but each dog may only be entered once in each stake. Hounds are named at the time of entry.</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-star"></i>Gillette Stake — Saturday Only</h3>
+                        <div class="space-y-2 text-[15px] leading-relaxed">
+                            <p>Run following Best-in-Field procedures. The eligible hound in each breed with the highest qualifying combined score in the Field Champion or Veteran Stake on Saturday is randomly drawn to run in the Gillette Stake. Run on Field B; <strong>no additional entry fee.</strong></p>
+                            <p class="font-semibold text-hc-deep">Eligibility — a hound must have ALL of:</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Be an AKC, ISWS, or foreign bench champion of record;</li>
+                                <li>Be an ASFA Field Champion; and</li>
+                                <li>Be entered in the Field Champion or Veteran Stake on Saturday.</li>
+                            </ul>
+                            <p class="text-xs text-hc-ink/70">Requirements must be met prior to close of entries; proof of bench title (photocopy) must accompany the entry — no exceptions. A separate Gillette entry form must reach the FTS by the regular closing date. ASFA does not recognize the UKC as a foreign-based registry for Bench Champion (as of Jan. 1, 2022).</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-crown"></i>Best in International Invitational — Sunday Only</h3>
+                        <div class="space-y-2 text-[15px] leading-relaxed">
+                            <p>Run Sunday following Best-in-Field procedures. All Best of Breed winners from Saturday and Sunday are eligible, provided they were entered and received qualifying scores running in prelims and finals both days.</p>
+                            <p>The winner of Best in International Invitational is credited with winning a Best in Field.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-paw"></i>Eligible Breeds</h3>
+                    <div class="space-y-3 text-[15px] leading-relaxed">
+                        <p><strong>Regular stakes (purebred):</strong> Afghan Hound, Azawakh, Basenji, Borzoi, Cirneco dell'Etna, Greyhound, Ibizan Hound, Irish Wolfhound, Italian Greyhound, Peruvian Inca Orchid, Pharaoh Hound, Rhodesian Ridgeback, Saluki, Scottish Deerhound, Silken Windhound, Sloughi, Whippet.</p>
+                        <p><strong>Provisional Stake breeds (purebred):</strong> Chart Polski, Galgo Español, Magyar Agár, Portuguese Podengo (Pequeno), Portuguese Podengo (Médio &amp; Grande). Must be individually registered by the appropriate registry.</p>
+                        <p class="text-xs text-hc-ink/70">All entries must be individually registered with AKC (ILP/PAL included), NGA, FCI, UKC, an ASFA-recognized foreign / ASFA-approved registry, or possess a CRN from SPDBS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ TAB 3: ENTRIES & FEES ============ -->
+        <section id="panel-entries" class="tab-panel" role="tabpanel" aria-labelledby="tab-entries">
+            <h2 class="sr-only">Entries &amp; Fees</h2>
+            <div class="space-y-5">
+                <div class="card border-l-4 border-hc-flame flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <i class="fa-solid fa-triangle-exclamation text-2xl text-hc-flame"></i>
+                    <div class="text-[15px]">
+                        <p class="font-abel text-lg text-hc-deep">All entries close 8:00 PM Pacific Daylight Time, Friday, 25 September 2026</p>
+                        <p><strong>No day-of-trial entries.</strong> Enter and pay through the online portal before the deadline.</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-dollar-sign"></i>Entry Fees (per day)</h3>
+                        <div>
+                            <div class="table-scroll">
+                                <table class="data">
+                                    <thead><tr><th>Item</th><th>Fee</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Entry fee (per dog)</td><td>$30.00</td></tr>
+                                        <tr><td>Kennel Stake</td><td>$10.00 per pair</td></tr>
+                                        <tr><td>Breeder Stake</td><td>$10.00 per pair</td></tr>
+                                        <tr><td>Generation Stake</td><td>$10.00 per pair</td></tr>
+                                        <tr><td>Bench Stake</td><td>$10.00 per dog</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-xs text-hc-ink/70 mt-3">All fees are paid via PayPal through the online entry portal.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-paper-plane"></i>How to Enter</h3>
+                        <div class="space-y-3 text-[15px] leading-relaxed">
+                            <p class="font-semibold text-hc-deep">Enter online</p>
+                            <p>Enter your dogs and make all reservations — meals, camping, golf carts, catalogues, donations — through the online portal. You'll be linked to PayPal for payment.</p>
+                            <a href="https://form.jotform.com/261315749736162" target="_blank" rel="noopener noreferrer" class="font-abel uppercase tracking-wider inline-flex items-center gap-2 bg-hc-flame hover:bg-hc-flameDark text-white px-4 py-2 transition"><i class="fa-solid fa-up-right-from-square"></i> Online Entry Portal</a>
+                            <p class="text-xs text-hc-ink/70">No entries by phone or fax. Prefer paper? Mail-in instructions and all forms are in the official <a href="https://asfa.org/event/premiums/2026%20ASFA%20II%20Premium%20Final%20Final.pdf" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">Premium List (PDF)</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-right-left"></i>Substitutions &amp; Stake Changes</h3>
+                    <div class="space-y-2 text-[15px] leading-relaxed">
+                        <p>Changes of stake and substitutions for lame or in-season hounds may be made by notifying Jennifer Gysler (<a href="mailto:Jennifer.DogShowEntries@gmail.com" class="text-hc-blue hover:underline">Jennifer.DogShowEntries@gmail.com</a>).</p>
+                        <p>Substitutions must be made <strong>no later than Monday, 19 October 2026</strong>, must have been eligible for entry when entries closed, and must be from the same owner &amp; household only. These changes will not appear in the catalogue.</p>
+                        <p>Entries are acknowledged by email only if a legible email address is provided.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-money-bill-transfer"></i>Refunds</h3>
+                    <div class="space-y-2 text-[15px] leading-relaxed">
+                        <p><strong>100% of entry fees</strong> are refunded if a written request reaches the Trial Secretary on or before the trial closing date.</p>
+                        <p>After the trial closes, a refund is given for an ill or injured dog or handler, bereavement, and/or family emergency — if the FTS is notified by the owner/handler prior to the close of roll call. Bitches in season are fully refunded on the same notice. <strong>No refund is given once a request is presented after the close of roll call.</strong></p>
+                        <p>No entry fee is refunded if the trial cannot open or be completed due to riots, civil disturbance, fire, act of God, public emergency, or other cause beyond the committee's control; nor if a dog is absent, disqualified, excused, or barred by action of the Field Trial Committee.</p>
+                        <p>There is a $50 fee for returned checks.</p>
+                        <p class="text-xs text-hc-ink/70">Exhibitors should follow their veterinarian's recommendation to ensure dogs are free of parasites and communicable disease and have appropriate vaccinations.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-calculator"></i>Fee Schedule &amp; Cost Estimator</h3>
+                    <div class="text-[15px] leading-relaxed">
+                        <p class="mb-1">Adjust the quantities to estimate your total.</p>
+                        <p class="text-xs text-hc-ink/70 mb-4">Planning tool only. <strong>All payments are made through the <a href="https://form.jotform.com/261315749736162" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">online entry form</a></strong> — the official worksheet and full instructions are in the <a href="https://asfa.org/event/premiums/2026%20ASFA%20II%20Premium%20Final%20Final.pdf" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline font-semibold">Premium List (PDF)</a>. Everything is due on or before 25 September 2026.</p>
+                        <div id="fee-calc" class="divide-y divide-hc-line">
+                            <!-- Entries & Stakes -->
+                            <div class="py-2">
+                                <p class="font-abel uppercase tracking-wider text-hc-deep mb-1">Entries &amp; Stakes</p>
+                                <div class="space-y-1.5">
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Dog entry <span class="text-hc-ink/70 text-xs">$30 · per dog, per day</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="30" aria-label="Quantity — Dog entry" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Breeder Stake <span class="text-hc-ink/70 text-xs">$10 · per pair, per day</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="10" aria-label="Quantity — Breeder Stake" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Kennel Stake <span class="text-hc-ink/70 text-xs">$10 · per pair, per day</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="10" aria-label="Quantity — Kennel Stake" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Generation Stake <span class="text-hc-ink/70 text-xs">$10 · per pair, per day</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="10" aria-label="Quantity — Generation Stake" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Bench Stake <span class="text-hc-ink/70 text-xs">$10 · per dog, per day</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="10" aria-label="Quantity — Bench Stake" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Meals -->
+                            <div class="py-2">
+                                <p class="font-abel uppercase tracking-wider text-hc-deep mb-1">Meals</p>
+                                <div class="space-y-1.5">
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Boxed lunch <span class="text-hc-ink/70 text-xs">$15 · per meal (Sat or Sun)</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="15" aria-label="Quantity — Boxed lunch" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Awards dinner (Sat) <span class="text-hc-ink/70 text-xs">$30 · per meal</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="30" aria-label="Quantity — Awards dinner" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Camping -->
+                            <div class="py-2">
+                                <p class="font-abel uppercase tracking-wider text-hc-deep mb-1">On-Site Camping</p>
+                                <div class="space-y-1.5">
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">RV / Trailer / Van <span class="text-hc-ink/70 text-xs">$75 · weekend</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="75" aria-label="Quantity — RV, Trailer or Van camping" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Tent <span class="text-hc-ink/70 text-xs">$25 · weekend</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="25" aria-label="Quantity — Tent camping" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Catalogues & Extras -->
+                            <div class="py-2">
+                                <p class="font-abel uppercase tracking-wider text-hc-deep mb-1">Catalogues &amp; Extras</p>
+                                <div class="space-y-1.5">
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Printed catalogue <span class="text-hc-ink/70 text-xs">$10 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="10" aria-label="Quantity — Printed catalogue" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Digital catalogue <span class="text-hc-ink/70 text-xs">$5 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="5" aria-label="Quantity — Digital catalogue" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Golf cart rental <span class="text-hc-ink/70 text-xs">$125 · weekend</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="125" aria-label="Quantity — Golf cart rental" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Commemorative logo pins <span class="text-hc-ink/70 text-xs">$5 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="5" aria-label="Quantity — Commemorative logo pins" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Catalogue Advertising -->
+                            <div class="py-2">
+                                <p class="font-abel uppercase tracking-wider text-hc-deep mb-1">Catalogue Advertising</p>
+                                <div class="space-y-1.5">
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Full-page ad (B/W) <span class="text-hc-ink/70 text-xs">$35 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="35" aria-label="Quantity — Full-page catalogue ad" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Half-page ad (B/W) <span class="text-hc-ink/70 text-xs">$25 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="25" aria-label="Quantity — Half-page catalogue ad" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Inside cover (B/W) <span class="text-hc-ink/70 text-xs">$70 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="70" aria-label="Quantity — Inside cover ad" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Back cover (color) <span class="text-hc-ink/70 text-xs">$100 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="100" aria-label="Quantity — Back cover ad" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Donations -->
+                            <div class="py-2">
+                                <p class="font-abel uppercase tracking-wider text-hc-deep mb-1">Donations <span class="text-hc-ink/70 normal-case">(optional)</span></p>
+                                <div class="space-y-1.5">
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Trophy — Best of Breed <span class="text-hc-ink/70 text-xs">$50 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="50" aria-label="Quantity — Best of Breed trophy sponsorship" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Trophy — Stake Winner <span class="text-hc-ink/70 text-xs">$35 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="35" aria-label="Quantity — Stake Winner trophy sponsorship" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Trophy — Flight Winner <span class="text-hc-ink/70 text-xs">$25 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="25" aria-label="Quantity — Flight Winner trophy sponsorship" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Trophy — Kennel Stake <span class="text-hc-ink/70 text-xs">$25 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="25" aria-label="Quantity — Kennel Stake trophy sponsorship" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Trophy — Breeder Stake <span class="text-hc-ink/70 text-xs">$25 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="25" aria-label="Quantity — Breeder Stake trophy sponsorship" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Trophy — Generation Stake <span class="text-hc-ink/70 text-xs">$25 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="25" aria-label="Quantity — Generation Stake trophy sponsorship" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Trophy — Bench Stake <span class="text-hc-ink/70 text-xs">$25 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="25" aria-label="Quantity — Bench Stake trophy sponsorship" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">Trophy — LCI <span class="text-hc-ink/70 text-xs">$25 each</span></span>
+                                        <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-price="25" aria-label="Quantity — LCI trophy sponsorship" class="fee-qty w-16 border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40">
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                    <div class="fee-row flex items-center gap-3">
+                                        <span class="flex-1 min-w-0">General donation <span class="text-hc-ink/70 text-xs">enter any $ amount</span></span>
+                                        <span class="inline-flex items-center"><span class="text-hc-ink/70 mr-1">$</span><input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0" id="fee-general" aria-label="General donation amount in dollars" class="w-[4.25rem] border border-[#ccc] bg-white px-2 py-1 text-right focus:outline-none focus:ring-2 focus:ring-hc-flame/40"></span>
+                                        <span class="fee-line w-24 text-right font-semibold tabular-nums">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex flex-wrap items-center justify-between gap-3 bg-white border border-hc-line px-4 py-3">
+                            <div>
+                                <p class="font-abel uppercase tracking-wider text-hc-deep">Estimated total</p>
+                                <p class="text-xs text-hc-ink/70">Estimate only — submit and pay via the online entry form.</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span id="fee-total" aria-live="polite" class="font-abel text-3xl text-hc-flame tabular-nums">$0.00</span>
+                                <button type="button" id="fee-reset" class="text-sm font-semibold text-hc-blue hover:text-hc-navy underline">Reset</button>
+                            </div>
+                        </div>
+                        <a href="https://form.jotform.com/261315749736162" target="_blank" rel="noopener noreferrer" class="font-abel uppercase tracking-wider mt-3 inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-hc-flame hover:bg-hc-flameDark text-white px-5 py-2.5 shadow transition">
+                            <i class="fa-solid fa-pen-to-square"></i> Enter &amp; pay online
+                        </a>
+                        <p class="text-xs text-hc-ink/70 mt-2">All entries, reservations and donations are submitted and paid through the online entry form (PayPal).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ TAB 4: FIELDS & JUDGES ============ -->
+        <section id="panel-schedule" class="tab-panel" role="tabpanel" aria-labelledby="tab-schedule">
+            <h2 class="sr-only">Fields &amp; Judges</h2>
+            <div class="space-y-5">
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-flag-checkered"></i>Running Procedure</h3>
+                    <div class="text-[15px] leading-relaxed">
+                        <ul class="list-disc pl-5 space-y-1.5">
+                            <li>Stakes split into flights, in public view, at 5:30 PM Friday, 23 October, if any one stake has 20 or more hounds.</li>
+                            <li>All hounds run twice — in trios if possible, or braces — unless excused, dismissed or disqualified.</li>
+                            <li>Singles and LCI run alone twice in the trial.</li>
+                            <li>Hounds not present at roll call are scratched after a five (5) minute grace period.</li>
+                            <li>Bitches in season, hounds with breed disqualifications, and lame hounds at roll call / inspection are excused and entry fee refunded.</li>
+                            <li>Monorchid, cryptorchid, spayed or neutered hounds may be entered. Muzzles are not required.</li>
+                            <li>A gas/battery-powered continuous-loop lure machine is used on each field; backup equipment available. Lure: highly visible plastic strips.</li>
+                            <li>The course is reversed for finals and run-offs at the judges' discretion.</li>
+                            <li>$5 fine for any loose hound on the field not taking part in a course in progress.</li>
+                            <li>No one except Field Committee members on the field without express permission of the Field Trial Chairman.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-gavel"></i>Judges</h3>
+                        <div class="text-[15px] leading-relaxed">
+                            <div class="table-scroll">
+                                <table class="data">
+                                    <thead><tr><th>Field A Judges</th><th>Field B Judges</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><span class="text-hc-blue font-semibold">Paul Kytta</span> — Macedonia, OH</td><td><span class="text-hc-blue font-semibold">Leonore Abordo</span> — Sandia Park, NM</td></tr>
+                                        <tr><td><span class="text-hc-blue font-semibold">Elaine McMichael</span> — Crestview, FL</td><td><span class="text-hc-blue font-semibold">Claudia Miller</span> — Arvada, CO</td></tr>
+                                        <tr><td><span class="text-hc-blue font-semibold">Ping Pirrung</span> (Sat. only) — New Bethlehem, PA</td><td></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-ruler-horizontal"></i>Course Plans</h3>
+                        <div class="text-[15px] leading-relaxed">
+                            <div class="table-scroll">
+                                <table class="data">
+                                    <thead><tr><th>Course</th><th>Length</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Field A</td><td>940 yards</td></tr>
+                                        <tr><td>Field B</td><td>763 yards</td></tr>
+                                        <tr><td>Best in Event (Field A)</td><td>1,110 yards</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-xs text-hc-ink/70 mt-3">The Gillette Stake is run on Field B (course plan subject to change). Best in Event is run on Field A at 1,110 yards. See the detailed course-plan diagrams in the <a href="https://asfa.org/event/premiums/2026%20ASFA%20II%20Premium%20Final%20Final.pdf" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">Premium List (PDF)</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-table-cells"></i>Field Assignments by Breed</h3>
+                    <div class="text-[15px] leading-relaxed">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <p class="font-abel text-lg text-hc-deep mb-2">Saturday</p>
+                                <div class="table-scroll">
+                                    <table class="data">
+                                        <thead><tr><th>Field A</th><th>Field B<span class="block font-normal normal-case text-[11px] mt-0.5">Leonore A. · Claudia M.</span></th></tr></thead>
+                                        <tbody>
+                                            <tr><td>Afghan Hound <span class="block font-normal text-[11px] text-hc-ink/80 mt-0.5">Paul K. · Elaine M.</span></td><td>Azawakh</td></tr>
+                                            <tr><td>Borzoi <span class="block font-normal text-[11px] text-hc-ink/80 mt-0.5">Paul K. · Elaine M.</span></td><td>Basenji</td></tr>
+                                            <tr><td>Cirneco dell'Etna <span class="block font-normal text-[11px] text-hc-ink/80 mt-0.5">Paul K. · Elaine M.</span></td><td>Italian Greyhound</td></tr>
+                                            <tr><td>Greyhound <span class="block font-normal text-[11px] text-hc-ink/80 mt-0.5">Paul K. · Elaine M.</span></td><td>Irish Wolfhound</td></tr>
+                                            <tr><td>Ibizan Hound <span class="block font-normal text-[11px] text-hc-ink/80 mt-0.5">Paul K. · Elaine M.</span></td><td>Peruvian Inca Orchid</td></tr>
+                                            <tr><td>Silken Windhound <span class="block font-normal text-[11px] text-hc-ink/80 mt-0.5">Paul K. · Elaine M.</span></td><td>Pharaoh Hound</td></tr>
+                                            <tr><td>Rhodesian Ridgeback <span class="block font-normal text-[11px] text-hc-ink/80 mt-0.5">Elaine M. · Ping P.</span></td><td>Saluki</td></tr>
+                                            <tr><td>Whippets <span class="block font-normal text-[11px] text-hc-ink/80 mt-0.5">Paul K. · Ping P.</span></td><td>Scottish Deerhound</td></tr>
+                                            <tr><td>Singles <span class="block font-normal text-[11px] text-hc-ink/80 mt-0.5">Paul K. · Ping P.</span></td><td>Sloughi</td></tr>
+                                            <tr><td></td><td>Provisional &amp; LCI</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-abel text-lg text-hc-deep mb-2">Sunday</p>
+                                <div class="table-scroll">
+                                    <table class="data">
+                                        <thead><tr><th>Field A<span class="block font-normal normal-case text-[11px] mt-0.5">Paul K. · Elaine M.</span></th><th>Field B<span class="block font-normal normal-case text-[11px] mt-0.5">Leonore A. · Claudia M.</span></th></tr></thead>
+                                        <tbody>
+                                            <tr><td>Azawakh</td><td>Afghan Hound</td></tr>
+                                            <tr><td>Basenji</td><td>Borzoi</td></tr>
+                                            <tr><td>Italian Greyhound</td><td>Cirneco dell'Etna</td></tr>
+                                            <tr><td>Irish Wolfhound</td><td>Greyhound</td></tr>
+                                            <tr><td>Peruvian Inca Orchid</td><td>Ibizan Hound</td></tr>
+                                            <tr><td>Pharaoh Hound</td><td>Silken Windhound</td></tr>
+                                            <tr><td>Saluki</td><td>Rhodesian Ridgeback</td></tr>
+                                            <tr><td>Scottish Deerhound</td><td>Whippets</td></tr>
+                                            <tr><td>Sloughi</td><td>Singles</td></tr>
+                                            <tr><td>Provisional &amp; LCI</td><td></td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-hc-ink/70 mt-3">Fields rotate between Saturday and Sunday. Ping P. (Pirrung) judges Field A on Saturday only. Full judge names are in the Judges box above. Running order will be determined after entries close.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-cloud-sun"></i>Field Conditions</h3>
+                    <div class="text-[15px] leading-relaxed space-y-2">
+                        <p>Average high temperature ~68°F. Natural vegetation.</p>
+                        <p>Gas- or battery-powered continuous-loop machines will be used; the lure consists of white (and/or black if warranted) plastic strips. Backup equipment available.</p>
+                        <p><strong>Practice will NOT be offered at the event.</strong> The course is reversed for finals, tie run-offs and BOB.</p>
+                        <p class="text-xs text-hc-ink/70">The Field Committee reserves the right to alter the course plan based on weather and/or field conditions; significant changes will be posted.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-shield-dog"></i>Notice to Exhibitors</h3>
+                    <div class="text-[15px] leading-relaxed space-y-2">
+                        <p>The safety of the dog is our primary concern. By entering, exhibitors acknowledge they are familiar with the rules and regulations of this sport and that their dogs are able to compete safely.</p>
+                        <p>Exhibitors alone are responsible for their own behavior and that of their dogs and/or children. Any exhibitor whose dogs or children create an unnecessary disturbance or repeatedly behave unsafely may, at the committee's discretion, be asked to leave the trial site with no refund. ASFA assumes no responsibility for any loss, damage or injury to exhibitors, handlers, dogs, property or children, and may decline entries for cause or remove any dog for aggression.</p>
+                        <ul class="list-disc pl-5 space-y-1 font-semibold text-hc-flame">
+                            <li>Unsportsmanlike conduct = excused from the field for the day.</li>
+                            <li>The Field Committee may bar known aggressive hounds from the trial site.</li>
+                            <li>$10.00 fine for anyone not picking up after their own dog(s).</li>
+                            <li>$5 fine for any loose hound on the field not taking part in a course in progress.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ TAB 5: AWARDS & TROPHIES ============ -->
+        <section id="panel-awards" class="tab-panel" role="tabpanel" aria-labelledby="tab-awards">
+            <h2 class="sr-only">Awards &amp; Trophies</h2>
+            <div class="space-y-5">
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-ribbon"></i>Ribbons, Awards &amp; Prizes</h3>
+                    <div class="text-[15px] leading-relaxed grid md:grid-cols-2 gap-5">
+                        <div>
+                            <p class="font-abel text-lg text-hc-deep mb-2">Rosette Colors — Placements</p>
+                            <ul class="space-y-1">
+                                <li><span class="inline-block w-3 h-3 rounded-full align-middle mr-2" style="background:#1d4ed8"></span>First — Blue</li>
+                                <li><span class="inline-block w-3 h-3 rounded-full align-middle mr-2" style="background:#dc2626"></span>Second — Red</li>
+                                <li><span class="inline-block w-3 h-3 rounded-full align-middle mr-2" style="background:#eab308"></span>Third — Yellow</li>
+                                <li><span class="inline-block w-3 h-3 rounded-full align-middle mr-2 border border-hc-line" style="background:#ffffff"></span>Fourth — White</li>
+                                <li><span class="inline-block w-3 h-3 rounded-full align-middle mr-2" style="background:#16a34a"></span>NBQ — Green</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-abel text-lg text-hc-deep mb-2">Special Rosettes</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>High scoring single — Navy/Gold</li>
+                                <li>LCI Stake placements; High scoring LCI Small, Large &amp; Sighthound Mix</li>
+                                <li>BOB winners — Purple and Gold</li>
+                                <li>High score in Breeder &amp; Kennel Stakes each day</li>
+                                <li>High score in Bench Stake — each breed, each day</li>
+                                <li>High score in Generation Stake — each breed, each day</li>
+                                <li>Gillette Winner Rosette</li>
+                                <li>Best in International Invitational — Red, White &amp; Blue Rosette</li>
+                            </ul>
+                            <p class="text-xs text-hc-ink/70 mt-3">ASFA will award trophies for all placements and Best of Breed, and medallions for Best of Breed, Gillette and Best in International Invitational.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-trophy"></i>Perpetual Trophies (by Breed)</h3>
+                    <div class="text-[15px] leading-relaxed">
+                        <div class="table-scroll">
+                            <table class="data trophy-names">
+                                <thead><tr><th>Breed</th><th>Saturday</th><th>Sunday</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Afghan Hound</td><td>Gary Forrester</td><td>Bandit</td></tr>
+                                    <tr><td>Azawakh</td><td>—</td><td>Cinnamon</td></tr>
+                                    <tr><td>Basenji</td><td>Merv &amp; Wilma Bauer</td><td>Sheena</td></tr>
+                                    <tr><td>Borzoi</td><td>“Locket”</td><td>Pyerun</td></tr>
+                                    <tr><td>Greyhound</td><td>Mike Lorenzo</td><td>Fantasy</td></tr>
+                                    <tr><td>Ibizan Hound</td><td>Dean Wright</td><td>Flyer</td></tr>
+                                    <tr><td>Irish Wolfhound</td><td>Kevin Bryson</td><td>Joshua</td></tr>
+                                    <tr><td>Italian Greyhound</td><td>Downing &amp; Dickinson</td><td>"D"</td></tr>
+                                    <tr><td>Pharaoh Hound</td><td>George &amp; Joyce Martin</td><td>Bozo</td></tr>
+                                    <tr><td>Rhodesian Ridgeback</td><td>Meg Willis-Redfern</td><td>Ida</td></tr>
+                                    <tr><td>Saluki</td><td>Bill Henry</td><td>Haseeb</td></tr>
+                                    <tr><td>Scottish Deerhound</td><td>Robert Sellers</td><td>Pyns</td></tr>
+                                    <tr><td>Whippet</td><td>Tom Leone</td><td>Betz Leone</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-medal"></i>Additional Perpetual Trophies</h3>
+                    <div class="text-[15px] leading-relaxed">
+                        <ul class="list-disc pl-5 space-y-1.5">
+                            <li><strong>Gillette Memorial Trophy</strong> — Gillette Stake winner (Saturday).</li>
+                            <li><strong>AWC Perpetual Trophy</strong> — Whippet representing the breed in the Gillette Stake.</li>
+                            <li><strong>Darkling Perpetual Trophy</strong> — Borzoi representing the breed in the Gillette Stake.</li>
+                            <li><strong>Eterna Perpetual Trophy</strong> — Ibizan Hound representing the breed in the Gillette Stake.</li>
+                            <li><strong>Whoopie Trophy</strong> — Irish Wolfhound representing the breed in the Gillette Stake.</li>
+                            <li><strong>Nitro Perpetual Trophy</strong> — Rhodesian Ridgeback representing the breed in the Gillette Stake.</li>
+                            <li><strong>Gallant Perpetual Trophy</strong> — NGA Greyhound with the greatest cumulative score for both days (Sunday).</li>
+                            <li><strong>President's Cup</strong> — donated by Arnold Ross, plus $100 from the current ASFA President — to the winner of Best in International Invitational (Sunday).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-hand-holding-dollar"></i>Trophy Sponsorships &amp; Donations</h3>
+                    <div class="text-[15px] leading-relaxed grid md:grid-cols-2 gap-5">
+                        <div>
+                            <p class="font-abel text-lg text-hc-deep mb-2">Sponsor a Trophy</p>
+                            <div class="table-scroll">
+                                <table class="data donation-items">
+                                    <thead><tr><th>Item</th><th>Amount</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Best of Breed</td><td>$50</td></tr>
+                                        <tr><td>Stake Winner</td><td>$35</td></tr>
+                                        <tr><td>Flight Winner</td><td>$25</td></tr>
+                                        <tr><td>Kennel Stake</td><td>$25</td></tr>
+                                        <tr><td>Breeder Stake</td><td>$25</td></tr>
+                                        <tr><td>Generation Stake</td><td>$25</td></tr>
+                                        <tr><td>Bench Stake</td><td>$25</td></tr>
+                                        <tr><td>LCI (Small / Large / Sighthound Mix — Open, Excellent or Vet)</td><td>$25</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-abel text-lg text-hc-deep mb-2">General Donation Classes</p>
+                            <div class="table-scroll">
+                                <table class="data donation-items">
+                                    <thead><tr><th>Class</th><th>Amount</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Silver</td><td>$10–$25</td></tr>
+                                        <tr><td>Gold</td><td>$26–$50</td></tr>
+                                        <tr><td>Platinum</td><td>$51–$99</td></tr>
+                                        <tr><td>Diamond</td><td>$100+</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-xs text-hc-ink/70 mt-3">Add sponsorships and donations with your online entry. All sponsors and donors are listed in the catalogue, but must be received by 25 September 2026.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ TAB 6: LOGISTICS ============ -->
+        <section id="panel-logistics" class="tab-panel" role="tabpanel" aria-labelledby="tab-logistics">
+            <h2 class="sr-only">Plan Your II Trip</h2>
+            <div class="space-y-5">
+                <div class="card border-l-4 border-hc-flame">
+                    <h3 class="card-title"><i class="fa-solid fa-triangle-exclamation"></i>Animal Health Notice — New World Screwworm</h3>
+                    <div class="text-[15px] leading-relaxed space-y-3">
+                        <p>New World Screwworm (NWS) affects warm-blooded animals. Review the current status and any animal-movement requirements before traveling to Oklahoma with your hounds.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://www.screwworm.gov" target="_blank" rel="noopener noreferrer" class="font-abel uppercase tracking-wider inline-flex items-center gap-2 bg-hc-flame hover:bg-hc-flameDark text-white px-3 py-1.5 text-xs transition"><i class="fa-solid fa-up-right-from-square"></i> screwworm.gov</a>
+                            <a href="https://ag.ok.gov/nws" target="_blank" rel="noopener noreferrer" class="font-abel uppercase tracking-wider inline-flex items-center gap-2 bg-hc-navy hover:bg-hc-bar text-white px-3 py-1.5 text-xs transition"><i class="fa-solid fa-up-right-from-square"></i> Oklahoma Dept. of Ag (NWS)</a>
+                        </div>
+                        <p class="text-xs text-hc-ink/70"><strong>screwworm.gov</strong> has the latest national info; <strong>ag.ok.gov/nws</strong> covers Oklahoma status, pet-owner guidance and movement requirements.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-bed"></i>Hotels · RV · Camping</h3>
+                    <div class="text-[15px] leading-relaxed space-y-3">
+                        <p class="text-xs text-hc-ink/70">Please check directly with each property — dog fees and restrictions can change.</p>
+                        <div>
+                            <p class="font-semibold text-hc-deep">Redbud Tiny Homes &amp; RV Resort</p>
+                            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=33830%20S%204310%20Rd%2C%20Big%20Cabin%2C%20OK%2074332" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">33830 S. 4310 Rd, Big Cabin, OK 74332</a> · <a href="tel:9182127850" class="text-hc-blue hover:underline">918-212-7850</a> · <a href="https://redbudresort.com/" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">redbudresort.com</a></p>
+                            <ul class="list-disc pl-5 mt-1 space-y-0.5">
+                                <li>Tiny homes (sleep 4) — $100/night + one-time cleaning fee. Code <strong>ORCATINYHOME2026</strong>. Book early — they fill fast.</li>
+                                <li>RV full hookups (30 &amp; 50 amp) — $29.75/night. Code <strong>ORCARVSITE26</strong>.</li>
+                                <li>Dry camping — $10/night. Gated; dog park, laundry, restroom, dump &amp; water station.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-1.5">
+                            <p><strong>Big Cabin RV Park</strong> — <a href="https://www.google.com/maps/search/?api=1&amp;query=Big%20Cabin%20RV%20Park%2C%20Big%20Cabin%2C%20OK" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">Big Cabin, OK</a> · <a href="tel:9187835159" class="text-hc-blue hover:underline">918-783-5159</a></p>
+                            <p><strong class="text-hc-deep">Super 8 Motel</strong> (Host Motel, exit 283) — <a href="https://www.google.com/maps/search/?api=1&amp;query=30954%20S%20Hwy%2069%2C%20Vinita%2C%20OK%2074301" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">30954 S. Hwy 69, Vinita, OK 74301</a> · <a href="tel:9187835888" class="text-hc-blue hover:underline">918-783-5888</a> · <a href="https://www.wyndhamhotels.com/super-8/vinita-oklahoma/super-8-big-cabin-vinita-area/overview" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">website</a> — allows pets; mention you're coming for an ORCA event for reduced pet fees.</p>
+                            <p><strong>Park Hills Motel &amp; RV Park</strong> — <a href="https://www.google.com/maps/search/?api=1&amp;query=438415%20US-60%2C%20Vinita%2C%20OK%2074301" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">438415 US-60, Vinita, OK</a> · <a href="tel:9182565511" class="text-hc-blue hover:underline">918-256-5511</a></p>
+                            <p><strong>Love's at Big Cabin</strong> — 4 full RV hookups · <a href="https://www.loves.com/locations/ok/big-cabin/loves-travel-stop-big-cabin-727" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">website</a></p>
+                            <p><strong>On-site camping</strong> — dry camping at the field (no water/electric, no open fires)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-campground"></i>On-Site Camping</h3>
+                        <div class="text-[15px] leading-relaxed space-y-2">
+                            <p>RVs &amp; travel trailers: no hookups. Reserve with your entries (note trailer/RV/van and length).</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Any motorized vehicle (incl. vans) — <strong>$75</strong> for the weekend</li>
+                                <li>Tent camping — <strong>$25</strong> for the weekend</li>
+                            </ul>
+                            <p>Sites available 12:00 PM (noon) Friday, 23 October through the morning of Monday, 26 October. <strong>Please plan to arrive after noon Friday.</strong> No campfires.</p>
+                            <p class="text-xs text-hc-ink/70">All camping fees are paid with your II entries.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-car-side"></i>Golf Cart Rental</h3>
+                        <div class="text-[15px] leading-relaxed space-y-2">
+                            <p>Golf carts are available for rental to assist mobility and <strong>must be reserved</strong>.</p>
+                            <p>Available Friday evening for pickup; returned late afternoon Sunday. <strong>$125 for the weekend.</strong></p>
+                            <p class="text-xs text-hc-ink/70">Include the fee and signed rental agreement with your entries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-utensils"></i>Food &amp; Banquet</h3>
+                    <div class="text-[15px] leading-relaxed grid md:grid-cols-2 gap-5">
+                        <div>
+                            <p class="font-abel text-lg text-hc-deep mb-1">Breakfast (purchase on the field)</p>
+                            <ul class="list-disc pl-5 space-y-0.5">
+                                <li>Breakfast Bowl (sausage, eggs, cheese) — $8</li>
+                                <li>Breakfast Burrito (sausage, eggs, cheese) — $10</li>
+                                <li>Misc. pastries — $2</li>
+                                <li>Drinks: Pop $2 · Tea $1 · Coffee $1 · Water $1</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-abel text-lg text-hc-deep mb-1">Pre-Order Only</p>
+                            <p><strong>Lunch — $15/person:</strong> Pulled pork sandwich, potato salad, chips, cookie.</p>
+                            <p class="mt-2"><strong>Awards Dinner — $30/person</strong> (Saturday evening). Choice of: Smoked Tri-Tip · Garlic Chicken · Vegetarian. Includes baby bakers, green beans, garden salad, homemade rolls; dessert (bread pudding or layered cake); tea or water.</p>
+                            <p class="text-xs text-hc-ink/70 mt-1">Dinner served ~45 min after ribbons on the field. Lunch &amp; dinner are pre-purchase only — reserve with your entries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-camera"></i>Official Photographers</h3>
+                        <div class="text-[15px] leading-relaxed space-y-3">
+                            <p><strong>Kara Hamilton</strong> &amp; <strong>Allison Shore</strong> are the <strong>only</strong> photographers allowed on the fields. Each will have information on obtaining photos of your dogs.</p>
+                            <div class="pt-3 border-t border-hc-line space-y-3">
+                                <div>
+                                    <p class="font-semibold text-hc-deep">Kara Hamilton Photography</p>
+                                    <p class="mt-1"><a href="https://www.karahamiltonphotos.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-hc-blue hover:underline font-semibold"><i class="fa-solid fa-up-right-from-square text-xs"></i> karahamiltonphotos.com</a></p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-hc-deep">Allison Shore — Oddpaw Studio</p>
+                                    <p class="mt-1"><a href="https://www.oddpawstudio.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-hc-blue hover:underline font-semibold"><i class="fa-solid fa-up-right-from-square text-xs"></i> oddpawstudio.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-shirt"></i>Merchandise &amp; Logo Pins</h3>
+                        <div class="text-[15px] leading-relaxed space-y-2">
+                            <p>Clothing &amp; accessories commemorating the 48th ASFA II — a variety of items and colors, shipped directly to you.</p>
+                            <a href="https://www.66apparel.com/shop/asfa/Q3BM5WTGZSVWXOT4GXDHKTKL?page=1&limit=30&sort_by=name&sort_order=asc" target="_blank" rel="noopener noreferrer" class="font-abel uppercase tracking-wider inline-flex items-center gap-2 bg-hc-navy hover:bg-hc-bar text-white px-4 py-2 transition"><i class="fa-solid fa-up-right-from-square"></i> Shop Merchandise</a>
+                            <p class="mt-2"><strong>Commemorative logo pins</strong> — $5 each; pre-order with your entries or buy at the II.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-gift"></i>Raffle</h3>
+                        <div class="text-[15px] leading-relaxed space-y-3">
+                            <p>Clubs are invited to put together a basket reflecting their state or region — or donate as an individual. All proceeds help defray the cost of the event.</p>
+                            <p>Donating a basket? Contact <strong>Gina Whritenour</strong> (Region 9 Director) at <a href="mailto:Reg9Dir@asfa.org" class="text-hc-blue hover:underline">Reg9Dir@asfa.org</a> to let her know what you are donating and its approximate value, or with any questions. (Gina is in the Eastern time zone.)</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-book"></i>Catalogue &amp; Advertising</h3>
+                        <div class="text-[15px] leading-relaxed space-y-4">
+                            <div>
+                                <p class="font-semibold text-hc-deep">Catalogues</p>
+                                <p>Pre-purchase, picked up at the trial: printed $10 each · digital $5 each. Contact Gina Whritenour at <a href="mailto:Reg9Dir@asfa.org" class="text-hc-blue hover:underline">Reg9Dir@asfa.org</a> (Eastern time zone). Bring correct change.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-hc-deep">Catalogue Advertising</p>
+                                <p>Advertise your hounds in the 2026 ASFA International Invitational Catalogue. Full catalogue page size is 8½" × 11".</p>
+                                <ul class="list-disc pl-5 space-y-0.5 mt-1">
+                                    <li>Ad (B/W): $35 full page · $25 half page</li>
+                                    <li>Inside covers (B/W): $70</li>
+                                    <li>Back cover (color): $100</li>
+                                </ul>
+                                <p class="mt-1"><strong>Ads must be received by 25 September 2026 — NO EXCEPTIONS.</strong></p>
+                                <p class="mt-1">Send photo(s) and ad text to <strong>Vicki Fagre Stroetz</strong> at <a href="mailto:vicki.fagre.stroetz@gmail.com" class="text-hc-blue hover:underline">vicki.fagre.stroetz@gmail.com</a> — she will work with you on design &amp; layout. All photos are mailed back after the II. Ads are not transferable to any other publication without additional cost.</p>
+                                <p class="mt-1">To place an ad or for more information, contact <strong>Jennifer Gysler</strong> at <a href="mailto:Jennifer.DogShowEntries@gmail.com" class="text-hc-blue hover:underline">Jennifer.DogShowEntries@gmail.com</a>.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-hc-deep">Ad Payment</p>
+                                <p>PayPal: <a href="mailto:treasurer@asfa.org" class="text-hc-blue hover:underline">treasurer@asfa.org</a> · <a href="https://www.paypal.com/paypalme/ASFACoursing" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline font-semibold">paypal.me/ASFACoursing</a>. Paying by check? Mailing details are in the premium.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-hands-clapping"></i>Hospitality</h3>
+                    <div class="text-[15px] leading-relaxed space-y-2">
+                        <p>Join an informal get-together at the field Friday night, 23 October — bring snacks and beverages to share.</p>
+                        <p>A food truck will be on site for breakfast and pre-ordered boxed lunches on Saturday and Sunday. The International Invitational Banquet is Saturday evening at the field — reservations required.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ TAB 7: FORMS & LINKS ============ -->
+        <section id="panel-forms" class="tab-panel" role="tabpanel" aria-labelledby="tab-forms">
+            <h2 class="sr-only">Forms &amp; Links</h2>
+            <div class="space-y-5">
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-link"></i>Quick Links</h3>
+                    <div class="grid sm:grid-cols-2 gap-4 text-[15px]">
+                        <a href="https://asfa.org/event/premiums/2026%20ASFA%20II%20Premium%20Final%20Final.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 bg-white border border-hc-line hover:border-hc-flame transition">
+                            <i class="fa-solid fa-file-pdf text-2xl text-hc-flame"></i>
+                            <span><span class="block font-semibold text-hc-deep">Download Premium List (PDF)</span><span class="text-xs text-hc-ink/70">Full 18-page premium with all entry forms &amp; worksheet</span></span>
+                        </a>
+                        <a href="https://www.asfa.org/rule/INV%2003--International%20Invitational%20Policy%2008-24.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 bg-white border border-hc-line hover:border-hc-flame transition">
+                            <i class="fa-solid fa-file-lines text-2xl text-hc-flame"></i>
+                            <span><span class="block font-semibold text-hc-deep">International Invitational Policy</span><span class="text-xs text-hc-ink/70">ASFA policy INV 03 (PDF)</span></span>
+                        </a>
+                        <a href="https://form.jotform.com/261315749736162" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 bg-white border border-hc-line hover:border-hc-flame transition">
+                            <i class="fa-solid fa-pen-to-square text-2xl text-hc-flame"></i>
+                            <span><span class="block font-semibold text-hc-deep">Online Entry &amp; Reservation Portal</span><span class="text-xs text-hc-ink/70">Enter dogs, reserve meals/camping, pay via PayPal</span></span>
+                        </a>
+                        <a href="https://maps.app.goo.gl/cctAXmPReZF3Q9PV9" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 bg-white border border-hc-line hover:border-hc-flame transition">
+                            <i class="fa-solid fa-map-location-dot text-2xl text-hc-flame"></i>
+                            <span><span class="block font-semibold text-hc-deep">Directions / Google Maps</span><span class="text-xs text-hc-ink/70">Couch Ranch, Vinita, OK</span></span>
+                        </a>
+                        <a href="https://www.facebook.com/groups/1046065245418921" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 bg-white border border-hc-line hover:border-hc-flame transition">
+                            <i class="fa-brands fa-facebook text-2xl text-hc-flame"></i>
+                            <span><span class="block font-semibold text-hc-deep">ASFA II Facebook Group</span><span class="text-xs text-hc-ink/70">Updates and discussion</span></span>
+                        </a>
+                        <a href="https://www.66apparel.com/shop/asfa/Q3BM5WTGZSVWXOT4GXDHKTKL?page=1&limit=30&sort_by=name&sort_order=asc" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 bg-white border border-hc-line hover:border-hc-flame transition">
+                            <i class="fa-solid fa-shirt text-2xl text-hc-flame"></i>
+                            <span><span class="block font-semibold text-hc-deep">Event Merchandise</span><span class="text-xs text-hc-ink/70">66 Apparel — ships directly to you</span></span>
+                        </a>
+                        <a href="https://www.asfa.org" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 bg-white border border-hc-line hover:border-hc-flame transition">
+                            <i class="fa-solid fa-house text-2xl text-hc-flame"></i>
+                            <span><span class="block font-semibold text-hc-deep">ASFA.org</span><span class="text-xs text-hc-ink/70">Main association website</span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-route"></i>Directions to the Field</h3>
+                    <div class="text-[15px] leading-relaxed space-y-2">
+                        <p>The field is ½ mile east of the Country Pets Bed &amp; Breakfast sign. GPS works at the <a href="https://maps.app.goo.gl/cctAXmPReZF3Q9PV9" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">map link</a>.</p>
+                        <p>From I-44: take the Big Cabin exit, go north on Hwy 69 to Hwy 60, then left (west) on Hwy 60 toward Nowata. Go to the County Rd 4340 marker signs (Tempson Chapel). Turn right (north) on County Rd 4340 and go 1 mile; turn right (east) on County Rd 250. The lure-coursing location is 1½ miles east, on the north side of the road.</p>
+                    </div>
+                </div>
+                <div class="card border-l-4 border-hc-flame">
+                    <p class="font-abel text-lg text-hc-deep"><i class="fa-solid fa-circle-exclamation mr-2 text-hc-flame"></i>Ready to enter?</p>
+                    <p class="text-[15px] leading-relaxed mt-1">Everything — entries, meal and camping reservations, golf carts, catalogues, donations — is submitted and paid through the <a href="https://form.jotform.com/261315749736162" target="_blank" rel="noopener noreferrer" class="text-hc-blue font-semibold hover:underline">online entry portal</a>, due by 25 September 2026. Mail-in instructions and all paper forms are in the premium PDF above.</p>
+                </div>
+            </div>
+        </section>
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-hc-navy text-white py-10 mt-auto">
+        <div class="max-w-[1160px] mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-center gap-5 text-sm mb-8 print:hidden">
+                <a href="https://www.asfa.org" class="font-abel uppercase tracking-wider hover:text-hc-sand transition">ASFA.org</a>
+                <a href="https://www.facebook.com/groups/1046065245418921" target="_blank" rel="noopener noreferrer" class="font-abel uppercase tracking-wider hover:text-hc-sand transition inline-flex items-center gap-2"><i class="fa-brands fa-facebook"></i> II Facebook</a>
+            </div>
+            <div id="disclaimer" class="max-w-4xl mx-auto text-left text-sm leading-relaxed space-y-4 scroll-mt-24 text-white/90">
+                <p>
+                    <strong class="text-white">Disclaimer.</strong> This is an independent, unofficial entrant's guide created and maintained by lure coursing enthusiasts. It is not authorized, approved, or endorsed by the American Sighthound Field Association (ASFA), and the official ASFA premium always governs. It summarizes the official premium list for the 48th ASFA International Invitational published at <a href="https://www.asfa.org" target="_blank" rel="noopener noreferrer" class="underline hover:text-hc-sand">asfa.org</a>.
+                </p>
+                <details>
+                    <summary class="text-white font-semibold underline hover:text-hc-sand">Read the full disclaimer <i class="fa-solid fa-chevron-down chev text-[10px]" aria-hidden="true"></i></summary>
+                    <div class="mt-4 space-y-3 text-xs">
+                        <p><strong class="text-white">What this is.</strong> A free community resource presenting the ASFA International Invitational premium list information in a mobile-friendly, easy-to-use format designed with consideration for recognized web accessibility standards (WCAG), so entrants can review event details comfortably from any device. It is not an official ASFA publication, software product, or service. The International Invitational is an ASFA-sanctioned event; the official premium list and entry materials are published by ASFA at <a href="https://www.asfa.org" target="_blank" rel="noopener noreferrer" class="underline hover:text-hc-sand">asfa.org</a>.</p>
+                        <p><strong class="text-white">A summary, not a reproduction.</strong> The content here is condensed and reorganized from the official premium; summarizing can introduce errors or omissions, and the premium contains material not repeated on this page (complete entry forms, waivers and full rules text). The people named on this page are ASFA officials and event volunteers listed in the official premium — they are not the operators of this site.</p>
+                        <p><strong class="text-white">Verify before you enter.</strong> You are responsible for verifying all dates, deadlines, fees, eligibility requirements, forms and reservations against the official premium and current ASFA rules. Where anything shown here disagrees with official ASFA rules, forms or publications, the official ASFA materials govern.</p>
+                        <p><strong class="text-white">Your data.</strong> No entries, reservations or payments are taken on this page. The cost estimator runs entirely in your browser — nothing you type is saved or sent anywhere. “Enter Online” buttons lead to the event's online entry portal (JotForm, with payment via PayPal), not to this site. This site uses Google Analytics to count visits.</p>
+                        <p><strong class="text-white">No warranty.</strong> This guide is provided “as is”, without warranty of any kind, express or implied. In the event of any discrepancy between this guide and the official ASFA premium, the official ASFA premium shall govern.</p>
+                    </div>
+                </details>
+                <p class="text-xs text-white/70 pt-3 border-t border-white/10 text-center">Guide last updated 24 July 2026 · Spotted an error or something out of date? <a href="mailto:info@gazehound.io" class="underline hover:text-hc-sand">info@gazehound.io</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Tab interaction -->
+    <script>
+        (function () {
+            var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab-btn'));
+            var panels = Array.prototype.slice.call(document.querySelectorAll('.tab-panel'));
+            var select = document.getElementById('tab-select');
+            var nav = document.getElementById('tab-nav');
+            var main = document.querySelector('main');
+            function activate(name, updateHash) {
+                // Non-tab hashes (e.g. #disclaimer) must not touch the tab bar.
+                var matched = tabs.some(function (t) { return t.getAttribute('data-tab') === name; });
+                if (!matched) return;
+                tabs.forEach(function (t) {
+                    var on = t.getAttribute('data-tab') === name;
+                    t.setAttribute('aria-selected', on ? 'true' : 'false');
+                    t.setAttribute('tabindex', on ? '0' : '-1');
+                });
+                panels.forEach(function (p) {
+                    p.classList.toggle('active', p.id === 'panel-' + name);
+                });
+                if (select && select.value !== name) select.value = name;
+                if (updateHash) {
+                    if (history.replaceState) history.replaceState(null, '', '#' + name);
+                    else location.hash = name;
+                }
+                // Land the new content under the sticky tab bar — but never yank
+                // the user back up to the hero if they're already reading below it.
+                if (nav && main) {
+                    var target = main.offsetTop - nav.offsetHeight;
+                    if (window.scrollY > target) window.scrollTo({ top: target, behavior: 'smooth' });
+                }
+            }
+            tabs.forEach(function (t) {
+                t.addEventListener('click', function () { activate(t.getAttribute('data-tab'), true); });
+            });
+            if (select) {
+                select.addEventListener('change', function () { activate(select.value, true); });
+            }
+            // Arrow-key navigation across the tab bar (WAI-ARIA tabs pattern)
+            var tablist = document.querySelector('[role="tablist"]');
+            if (tablist) {
+                tablist.addEventListener('keydown', function (e) {
+                    var idx = tabs.indexOf(document.activeElement);
+                    if (idx < 0) return;
+                    var n = null;
+                    if (e.key === 'ArrowRight') n = (idx + 1) % tabs.length;
+                    else if (e.key === 'ArrowLeft') n = (idx - 1 + tabs.length) % tabs.length;
+                    else if (e.key === 'Home') n = 0;
+                    else if (e.key === 'End') n = tabs.length - 1;
+                    if (n === null) return;
+                    e.preventDefault();
+                    var t = tabs[n];
+                    activate(t.getAttribute('data-tab'), true);
+                    t.focus();
+                });
+            }
+            // In-page links that jump to a tab (e.g. data-goto="stakes")
+            document.querySelectorAll('[data-goto]').forEach(function (a) {
+                a.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    activate(a.getAttribute('data-goto'), true);
+                });
+            });
+            // Open the right tab from the URL hash on load
+            var initial = (location.hash || '').replace('#', '');
+            if (initial) activate(initial, false);
+            window.addEventListener('hashchange', function () {
+                var name = (location.hash || '').replace('#', '');
+                if (name) activate(name, false);
+            });
+        })();
+        // Fee Schedule & Budget Planner
+        (function () {
+            var calc = document.getElementById('fee-calc');
+            if (!calc) return;
+            var totalEl = document.getElementById('fee-total');
+            var generalEl = document.getElementById('fee-general');
+            var resetBtn = document.getElementById('fee-reset');
+            function money(n) {
+                return '$' + (Math.round(n * 100) / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            }
+            function num(v) {
+                var n = parseFloat(v);
+                return (isNaN(n) || n < 0) ? 0 : n;
+            }
+            function recalc() {
+                var total = 0;
+                calc.querySelectorAll('.fee-row').forEach(function (row) {
+                    var input = row.querySelector('input');
+                    var line = row.querySelector('.fee-line');
+                    var amount;
+                    if (input === generalEl) {
+                        amount = num(input.value);            // general donation: raw $ amount
+                    } else {
+                        amount = Math.floor(num(input.value)) * parseFloat(input.getAttribute('data-price'));
+                    }
+                    if (line) line.textContent = money(amount);
+                    total += amount;
+                });
+                totalEl.textContent = money(total);
+            }
+            calc.addEventListener('input', recalc);
+            if (resetBtn) {
+                resetBtn.addEventListener('click', function () {
+                    calc.querySelectorAll('input').forEach(function (i) { i.value = ''; });
+                    recalc();
+                });
+            }
+            recalc();
+        })();
+        // Footer disclaimer: open the disclosure when linked to, and when printing
+        (function () {
+            var details = document.querySelector('#disclaimer details');
+            if (!details) return;
+            function open() { details.open = true; }
+            document.querySelectorAll('a[href="#disclaimer"]').forEach(function (a) {
+                a.addEventListener('click', open);
+            });
+            function checkHash() { if ((location.hash || '') === '#disclaimer') open(); }
+            checkHash();
+            window.addEventListener('hashchange', checkHash);
+            window.addEventListener('beforeprint', open);
+        })();
+    </script>
+</body>
+</html>
