@@ -19,3 +19,30 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+SCOPE OF THIS LICENSE / THIRD-PARTY MATERIALS
+
+The MIT license above applies to the site code in this repository: the HTML,
+CSS, and JavaScript authored for this guide. It does not apply to the
+following, which are included under separate terms:
+
+1. PHOTOGRAPH — "hero-field.jpg" is a photograph by Peri Ann Taylor
+   (periannphotography.artistwebsites.com). It is included for use in this
+   guide only. It is NOT licensed under the MIT license above and may not be
+   reused, modified, redistributed, or sold on the basis of that license.
+   Contact the photographer directly for any other use.
+
+2. EVENT INFORMATION — The schedules, fees, rules, stake definitions, and
+   trophy listings presented in this guide are drawn from the official premium
+   list of the American Sighthound Field Association (ASFA) and remain the
+   property of ASFA. ASFA's name and marks are used descriptively to identify
+   the event. This project is independent and is not authorized, approved, or
+   endorsed by ASFA.
+
+3. LOGO / ICON FILES — "favicon.ico", "favicon-16x16.png",
+   "favicon-32x32.png", and "apple-touch-icon.png" are cropped from the
+   Gazehound Group logo, a brand mark of the project maintainer. They are
+   included to identify this project. Nothing in the MIT license above grants
+   rights to use that mark for other purposes.

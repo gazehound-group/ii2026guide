@@ -16,8 +16,13 @@ The International Invitational is an ASFA-sanctioned event; the official premium
 | --- | --- |
 | `index.html` | The entire guide — self-contained markup, styles, and scripts |
 | `hero-field.jpg` | Hero banner photograph (see [License](#license) — not covered by the MIT license) |
+| `favicon.ico` | Browser tab icon — 16, 32, and 48 px packed into one file |
+| `favicon-16x16.png`, `favicon-32x32.png` | PNG tab icons for browsers that prefer them |
+| `apple-touch-icon.png` | 180 px icon for iOS home-screen bookmarks |
 | `LICENSE` | MIT license for the site code, with third-party carve-outs |
 | `README.md` | This file |
+
+The icons are cropped from the Gazehound Group logo — the GG monogram with the running sighthound beneath it.
 
 There is no build step, package manager, or framework. Tailwind CSS and Font Awesome load from CDNs; the Abel webfont loads from Google Fonts. Everything else is plain HTML, CSS, and vanilla JavaScript.
 
@@ -51,10 +56,11 @@ Please verify against the official premium first — if the two disagree, the pr
 
 The site code in this repository — the HTML, CSS, and JavaScript in `index.html` — is released under the [MIT License](LICENSE).
 
-**Two things in and around this repository are not MIT-licensed:**
+**Three things in and around this repository are not MIT-licensed:**
 
 - **`hero-field.jpg`** is a photograph by **Peri Ann Taylor** ([periannphotography.artistwebsites.com](https://periannphotography.artistwebsites.com)). It is included here for use in this guide only. It is **not** covered by the MIT license and may not be reused, modified, redistributed, or sold on the basis of that license. Contact the photographer directly for any other use.
 - **The event information** — schedules, fees, rules, stake definitions, and trophy listings — is drawn from ASFA's official premium list and remains the property of the **American Sighthound Field Association**. ASFA's name and marks are used descriptively to identify the event; this project is not affiliated with or endorsed by ASFA.
+- **The icon files** (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`) are cropped from the **Gazehound Group** logo, a brand mark of the project maintainer. They are included to identify this project. The MIT license covers the code, not rights to use the mark for other purposes.
 
 ## Credits
 
