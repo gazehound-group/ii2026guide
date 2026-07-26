@@ -19,6 +19,7 @@ The International Invitational is an ASFA-sanctioned event; the official premium
 | `favicon.ico` | Browser tab icon — 16, 32, and 48 px packed into one file |
 | `favicon-16x16.png`, `favicon-32x32.png` | PNG tab icons for browsers that prefer them |
 | `apple-touch-icon.png` | 180 px icon for iOS home-screen bookmarks |
+| `rabbit.png` | Rabbit mark for the "Results & Winners" teaser |
 | `LICENSE` | MIT license for the site code, with third-party carve-outs |
 | `README.md` | This file |
 

@@ -135,17 +135,17 @@
         /* Emphasize donation/sponsorship item names (first column) */
         table.donation-items tbody td:first-child { font-weight: 700; color: #222222; }
         .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        /* Footer disclaimer disclosure */
-        #disclaimer details > summary {
+        /* Expandable disclosure — used by the footer disclaimer and the results teaser */
+        .disclosure > summary {
             cursor: pointer;
             list-style: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
         }
-        #disclaimer details > summary::-webkit-details-marker { display: none; }
-        #disclaimer details > summary .chev { transition: transform .2s ease; }
-        #disclaimer details[open] > summary .chev { transform: rotate(180deg); }
+        .disclosure > summary::-webkit-details-marker { display: none; }
+        .disclosure > summary .chev { transition: transform .2s ease; }
+        .disclosure[open] > summary .chev { transform: rotate(180deg); }
         @media print {
             .print\:hidden { display: none !important; }
             /* Print the whole guide, including sections currently hidden */
@@ -164,7 +164,7 @@
         /* Respect the user's motion preference */
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto !important; }
-            .sec-link, .transition, #disclaimer details > summary .chev { transition: none !important; }
+            .sec-link, .transition, .disclosure > summary .chev { transition: none !important; }
         }
     </style>
 </head>
@@ -785,6 +785,17 @@
         <section id="awards" class="guide-section" hidden="until-found" aria-labelledby="h-awards">
             <h2 id="h-awards" class="section-title">Awards &amp; Trophies</h2>
             <div class="space-y-5">
+                <div class="card border-l-4 border-hc-flame">
+                    <details class="disclosure">
+                        <summary class="card-title mb-0">
+                            <img src="rabbit.png" alt="" width="28" height="28" class="inline-block align-middle">
+                            Results &amp; Winners
+                            <i class="fa-solid fa-chevron-down chev text-xs" aria-hidden="true"></i>
+                        </summary>
+                        <p class="text-[15px] leading-relaxed mt-3">Tally Ho! Coming soon&hellip;</p>
+                        <p class="text-xs text-hc-ink/80 mt-2">Check back after the trial on 24&ndash;25 October 2026.</p>
+                    </details>
+                </div>
                 <div class="card">
                     <h3 class="card-title"><i class="fa-solid fa-ribbon" aria-hidden="true"></i>Ribbons, Awards &amp; Prizes</h3>
                     <div class="text-[15px] leading-relaxed grid md:grid-cols-2 gap-5">
@@ -1105,7 +1116,7 @@
                 <p>
                     <strong class="text-white">Disclaimer.</strong> This is an independent, unofficial entrant's guide created and maintained by lure coursing enthusiasts. It is not authorized, approved, or endorsed by the American Sighthound Field Association (ASFA), and the official ASFA premium always governs. It summarizes the official premium list for the 48th ASFA International Invitational published at <a href="https://www.asfa.org" target="_blank" rel="noopener noreferrer" class="underline hover:text-hc-sand">asfa.org</a>.
                 </p>
-                <details>
+                <details class="disclosure">
                     <summary class="text-white font-semibold underline hover:text-hc-sand">Read the full disclaimer <i class="fa-solid fa-chevron-down chev text-[10px]" aria-hidden="true"></i></summary>
                     <div class="mt-4 space-y-3 text-xs">
                         <p><strong class="text-white">What this is.</strong> A free community resource presenting the ASFA International Invitational premium list information in a mobile-friendly, easy-to-use format designed with consideration for recognized web accessibility standards (WCAG), so entrants can review event details comfortably from any device. It is not an official ASFA publication, software product, or service. The International Invitational is an ASFA-sanctioned event; the official premium list and entry materials are published by ASFA at <a href="https://www.asfa.org" target="_blank" rel="noopener noreferrer" class="underline hover:text-hc-sand">asfa.org</a>.</p>
@@ -1240,9 +1251,13 @@
             }
             recalc();
         })();
-        // Footer disclaimer: open the disclosure when linked to, and when printing
+        // Footer disclaimer: open the disclosure when linked to. Every disclosure
+        // on the page opens for print, so nothing collapsed is lost on paper.
         (function () {
             var details = document.querySelector('#disclaimer details');
+            window.addEventListener('beforeprint', function () {
+                document.querySelectorAll('.disclosure').forEach(function (d) { d.open = true; });
+            });
             if (!details) return;
             function open() { details.open = true; }
             document.querySelectorAll('a[href="#disclaimer"]').forEach(function (a) {
@@ -1251,7 +1266,6 @@
             function checkHash() { if ((location.hash || '') === '#disclaimer') open(); }
             checkHash();
             window.addEventListener('hashchange', checkHash);
-            window.addEventListener('beforeprint', open);
         })();
     </script>
 </body>
