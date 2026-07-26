@@ -88,10 +88,18 @@
             border-bottom-color: #CC2900;
         }
         .sec-link:focus-visible { outline: 2px solid #CC2900; outline-offset: -2px; }
-        /* Every section is always in the page (findable with Ctrl+F); the sticky
-           nav just scrolls to it. --nav-h is kept in sync by script. */
+        /* One section shows at a time, like tabs. Inactive ones stay in the
+           document as hidden="until-found" so browser find-in-page can still
+           reach them and auto-reveal the right section.
+           Tailwind's preflight sets [hidden]{display:none}, which would defeat
+           that entirely — this more specific rule restores the intended
+           behaviour. Browsers without until-found support fall back to
+           ordinary hiding, which is the pre-existing behaviour. */
+        section[hidden="until-found"] {
+            display: block;
+            content-visibility: hidden;
+        }
         .guide-section { scroll-margin-top: calc(var(--nav-h, 5rem) + 1rem); }
-        .guide-section + .guide-section { margin-top: 2.5rem; }
         .section-title {
             font-family: 'Abel', sans-serif;
             font-size: 1.75rem;
@@ -140,7 +148,11 @@
         #disclaimer details[open] > summary .chev { transform: rotate(180deg); }
         @media print {
             .print\:hidden { display: none !important; }
-            /* Sections are always rendered now; keep headings from splitting */
+            /* Print the whole guide, including sections currently hidden */
+            section[hidden] {
+                display: block !important;
+                content-visibility: visible !important;
+            }
             .guide-section { break-inside: auto; }
             .section-title { break-after: avoid; color: #000; border-bottom-color: #000; }
             /* Backgrounds don't print — force readable text where it is white on a colored band */
@@ -270,7 +282,7 @@
                             <li>Have placed in a Regional Invitational (with competition).</li>
                         </ul>
                         <p>Singles and LCI entrants must have earned 20 lifetime ASFA points. Entrants in <strong>breed stakes</strong> must have earned the 20 points running against competition <em>in their specific breed's stake</em> — points earned in Singles do not count toward breed-stake eligibility. Provisional Stake entries need one 1st placement or two 2nd placements (with competition) in the Provisional Stake.</p>
-                        <p class="text-xs text-hc-ink/80">Full eligibility, registry and proof requirements are in the <a href="#stakes" class="text-hc-flame font-semibold hover:underline">Stakes</a> section and the official premium PDF.</p>
+                        <p class="text-xs text-hc-ink/80">Full eligibility, registry and proof requirements are in the <a href="#stakes" class="text-hc-flame font-semibold hover:underline">Stakes</a> tab and the official premium PDF.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -322,7 +334,7 @@
             </div>
         </section>
         <!-- ============ TAB 2: STAKES ============ -->
-        <section id="stakes" class="guide-section" aria-labelledby="h-stakes">
+        <section id="stakes" class="guide-section" hidden="until-found" aria-labelledby="h-stakes">
             <h2 id="h-stakes" class="section-title">Stakes</h2>
             <div class="space-y-5">
                 <div class="card">
@@ -395,7 +407,7 @@
             </div>
         </section>
         <!-- ============ TAB 3: ENTRIES & FEES ============ -->
-        <section id="entries" class="guide-section" aria-labelledby="h-entries">
+        <section id="entries" class="guide-section" hidden="until-found" aria-labelledby="h-entries">
             <h2 id="h-entries" class="section-title">Entries &amp; Fees</h2>
             <div class="space-y-5">
                 <div class="card border-l-4 border-hc-flame flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -644,7 +656,7 @@
             </div>
         </section>
         <!-- ============ TAB 4: FIELDS & JUDGES ============ -->
-        <section id="schedule" class="guide-section" aria-labelledby="h-schedule">
+        <section id="schedule" class="guide-section" hidden="until-found" aria-labelledby="h-schedule">
             <h2 id="h-schedule" class="section-title">Fields &amp; Judges</h2>
             <div class="space-y-5">
                 <div class="card">
@@ -770,7 +782,7 @@
             </div>
         </section>
         <!-- ============ TAB 5: AWARDS & TROPHIES ============ -->
-        <section id="awards" class="guide-section" aria-labelledby="h-awards">
+        <section id="awards" class="guide-section" hidden="until-found" aria-labelledby="h-awards">
             <h2 id="h-awards" class="section-title">Awards &amp; Trophies</h2>
             <div class="space-y-5">
                 <div class="card">
@@ -883,7 +895,7 @@
             </div>
         </section>
         <!-- ============ TAB 6: LOGISTICS ============ -->
-        <section id="logistics" class="guide-section" aria-labelledby="h-logistics">
+        <section id="logistics" class="guide-section" hidden="until-found" aria-labelledby="h-logistics">
             <h2 id="h-logistics" class="section-title">Plan Your II Trip</h2>
             <div class="space-y-5">
                 <div class="card border-l-4 border-hc-flame">
@@ -1031,7 +1043,7 @@
             </div>
         </section>
         <!-- ============ TAB 7: FORMS & LINKS ============ -->
-        <section id="forms" class="guide-section" aria-labelledby="h-forms">
+        <section id="forms" class="guide-section" hidden="until-found" aria-labelledby="h-forms">
             <h2 id="h-forms" class="section-title">Forms &amp; Links</h2>
             <div class="space-y-5">
                 <div class="card">
@@ -1109,12 +1121,14 @@
     </footer>
     <!-- Tab interaction -->
     <script>
-        // Section navigation. Every section is always in the document so that
-        // browser find-in-page reaches the whole guide; the nav only scrolls.
+        // Section navigation. One section shows at a time, but the others stay in
+        // the document as hidden="until-found" so browser find-in-page reaches the
+        // whole guide and opens the right section on a match.
         (function () {
             var links = Array.prototype.slice.call(document.querySelectorAll('.sec-link'));
             var select = document.getElementById('tab-select');
             var nav = document.getElementById('tab-nav');
+            var main = document.getElementById('main-content');
             var sections = links
                 .map(function (l) { return document.getElementById(l.getAttribute('data-section')); })
                 .filter(Boolean);
@@ -1136,45 +1150,56 @@
                 if (select && select.value !== id) select.value = id;
             }
 
-            // Highlight whichever section the reader is currently in. Cheap enough
-            // (a loop over seven elements) to run straight from the event.
-            function updateCurrent() {
-                var line = window.scrollY + (nav ? nav.offsetHeight : 0) + 24;
-                var current = sections[0].id;
-                sections.forEach(function (s) { if (s.offsetTop <= line) current = s.id; });
-                // At the very bottom, the last section wins even if it is short.
-                if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
-                    current = sections[sections.length - 1].id;
+            // Show one section, hide the rest as until-found so find-in-page can
+            // still reach them. `reveal` is the section the browser is already
+            // opening for us after a text match — leave that one alone.
+            function activate(id, updateHash, scroll) {
+                // Only section ids may drive the nav. Other in-page anchors
+                // (#disclaimer, #main-content) must leave the sections alone.
+                var isSection = sections.some(function (s) { return s.id === id; });
+                if (!isSection) return;
+                sections.forEach(function (s) {
+                    if (s.id === id) s.removeAttribute('hidden');
+                    else s.setAttribute('hidden', 'until-found');
+                });
+                setCurrent(id);
+                if (updateHash && history.replaceState) history.replaceState(null, '', '#' + id);
+                // Land the new section under the sticky bar, but never yank the
+                // reader back up to the hero if they are already below it.
+                if (scroll && nav && main) {
+                    var target = main.offsetTop - nav.offsetHeight;
+                    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    if (window.scrollY > target) window.scrollTo({ top: target, behavior: reduce ? 'auto' : 'smooth' });
                 }
-                setCurrent(current);
             }
-            window.addEventListener('scroll', updateCurrent, { passive: true });
-            // Sections crossing the viewport also drive the highlight, so it stays
-            // correct even when the position changes without a scroll event.
-            if ('IntersectionObserver' in window) {
-                var io = new IntersectionObserver(updateCurrent, { threshold: [0, 0.25, 0.5, 0.75, 1] });
-                sections.forEach(function (s) { io.observe(s); });
-            }
-            // Clicking a section link marks it immediately, before the scroll lands.
+
             links.forEach(function (l) {
-                l.addEventListener('click', function () { setCurrent(l.getAttribute('data-section')); });
+                l.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    activate(l.getAttribute('data-section'), true, true);
+                });
             });
-            window.addEventListener('hashchange', function () {
-                var id = (location.hash || '').replace('#', '');
-                if (document.getElementById(id)) setCurrent(id);
+            if (select) {
+                select.addEventListener('change', function () { activate(select.value, true, true); });
+            }
+
+            // Ctrl+F matched inside a hidden section: the browser is about to
+            // reveal it, so switch the nav to match instead of fighting it.
+            sections.forEach(function (s) {
+                s.addEventListener('beforematch', function () {
+                    sections.forEach(function (o) { if (o !== s) o.setAttribute('hidden', 'until-found'); });
+                    setCurrent(s.id);
+                    if (history.replaceState) history.replaceState(null, '', '#' + s.id);
+                });
             });
 
-            // Mobile dropdown jumps to a section instead of swapping panels.
-            if (select) {
-                select.addEventListener('change', function () {
-                    var el = document.getElementById(select.value);
-                    if (!el) return;
-                    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                    el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-                    if (history.replaceState) history.replaceState(null, '', '#' + select.value);
-                });
-            }
-            updateCurrent();
+            window.addEventListener('hashchange', function () {
+                activate((location.hash || '').replace('#', ''), false, true);
+            });
+            // Deep link on load, e.g. /#stakes
+            var initial = (location.hash || '').replace('#', '');
+            if (initial && document.getElementById(initial)) activate(initial, false, false);
+            else setCurrent(sections[0].id);
         })();
         // Fee Schedule & Budget Planner
         (function () {
