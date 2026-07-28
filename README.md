@@ -15,11 +15,13 @@ The International Invitational is an ASFA-sanctioned event; the official premium
 | File | Purpose |
 | --- | --- |
 | `index.html` | The entire guide — self-contained markup, styles, and scripts |
-| `hero-field.jpg` | Hero banner photograph (see [License](#license) — not covered by the MIT license) |
-| `favicon.ico` | Browser tab icon — 16, 32, and 48 px packed into one file |
-| `favicon-16x16.png`, `favicon-32x32.png` | PNG tab icons for browsers that prefer them |
-| `apple-touch-icon.png` | 180 px icon for iOS home-screen bookmarks |
-| `rabbit.png` | Rabbit mark for the "Results & Winners" teaser |
+| `assets/hero-field.jpg` | Hero banner photograph (see [License](#license) — not covered by the MIT license) |
+| `assets/favicon.ico` | Browser tab icon — 16, 32, and 48 px packed into one file |
+| `favicon.ico` | Identical copy at the root, for clients that request `/favicon.ico` directly instead of reading the `<link>` tags |
+| `assets/favicon-16x16.png`, `assets/favicon-32x32.png` | PNG tab icons for browsers that prefer them |
+| `assets/apple-touch-icon.png` | 180 px icon for iOS home-screen bookmarks |
+| `assets/rabbit.png` | Rabbit mark for the "Results & Winners" teaser |
+| `assets/jackrabbit-icon-40.png`, `assets/jackrabbit-full-300.png` | The Jackrabbit Project mark used in the footer |
 | `LICENSE` | MIT license for the site code, with third-party carve-outs |
 | `README.md` | This file |
 
@@ -59,9 +61,9 @@ The site code in this repository — the HTML, CSS, and JavaScript in `index.htm
 
 **Three things in and around this repository are not MIT-licensed:**
 
-- **`hero-field.jpg`** is a photograph by **Peri Ann Taylor** ([periannphotography.artistwebsites.com](https://periannphotography.artistwebsites.com)). It is included here for use in this guide only. It is **not** covered by the MIT license and may not be reused, modified, redistributed, or sold on the basis of that license. Contact the photographer directly for any other use.
+- **`assets/hero-field.jpg`** is a photograph by **Peri Ann Taylor** ([periannphotography.artistwebsites.com](https://periannphotography.artistwebsites.com)). It is included here for use in this guide only. It is **not** covered by the MIT license and may not be reused, modified, redistributed, or sold on the basis of that license. Contact the photographer directly for any other use.
 - **The event information** — schedules, fees, rules, stake definitions, and trophy listings — is drawn from ASFA's official premium list and remains the property of the **American Sighthound Field Association**. ASFA's name and marks are used descriptively to identify the event; this project is not affiliated with or endorsed by ASFA.
-- **The icon files** (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`) are cropped from the **Gazehound Group** logo, a brand mark of the project maintainer. They are included to identify this project. The MIT license covers the code, not rights to use the mark for other purposes.
+- **The icon files** (`assets/favicon.ico`, `assets/favicon-16x16.png`, `assets/favicon-32x32.png`, `assets/apple-touch-icon.png`) are cropped from the **Gazehound Group** logo, a brand mark of the project maintainer. They are included to identify this project. The MIT license covers the code, not rights to use the mark for other purposes.
 
 ## Credits
 
