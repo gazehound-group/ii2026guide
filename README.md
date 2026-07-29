@@ -35,4 +35,4 @@ Please verify against the official premium first — if the two disagree, the pr
 
 ## License
 
-The site code is released under the [MIT License](LICENSE). The hero photograph (© Peri Ann Taylor), the ASFA event information, and the Gazehound Group icon files are **not** MIT-licensed — see [LICENSE](LICENSE) for the carve-outs.
+The site code is released under the [MIT License](LICENSE). The hero photograph (© Peri Ann Taylor), the ASFA event information, and the Jackrabbit Project icon files are **not** MIT-licensed — see [LICENSE](LICENSE) for the carve-outs.
