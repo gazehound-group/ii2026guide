@@ -1088,6 +1088,10 @@
                             <i class="fa-solid fa-house text-2xl text-hc-flame" aria-hidden="true"></i>
                             <span><span class="block font-semibold text-hc-deep">ASFA.org</span><span class="text-xs text-hc-ink/80">Main association website</span></span>
                         </a>
+                        <a href="firsttimers.html" class="flex items-center gap-3 p-4 bg-white border border-hc-line hover:border-hc-flame transition">
+                            <i class="fa-solid fa-signs-post text-2xl text-hc-flame" aria-hidden="true"></i>
+                            <span><span class="block font-semibold text-hc-deep">First Time at the II?</span><span class="text-xs text-hc-ink/80">What to expect, etiquette, volunteering &amp; sponsoring</span></span>
+                        </a>
                     </div>
                 </div>
                 <div class="card">
@@ -1111,6 +1115,17 @@
             <div class="flex flex-wrap items-center justify-center gap-5 text-sm mb-8 print:hidden">
                 <a href="https://www.asfa.org" class="font-abel uppercase tracking-wider hover:text-hc-sand transition inline-flex items-center gap-2"><i class="fa-solid fa-house" aria-hidden="true"></i> ASFA.org</a>
                 <a href="https://www.facebook.com/groups/1046065245418921" target="_blank" rel="noopener noreferrer" class="font-abel uppercase tracking-wider hover:text-hc-sand transition inline-flex items-center gap-2"><i class="fa-brands fa-facebook" aria-hidden="true"></i> II Facebook</a>
+            </div>
+            <!-- Share the guide -->
+            <div class="max-w-4xl mx-auto text-center mb-8 print:hidden">
+                <p class="font-abel uppercase tracking-wider text-sm text-white/80 mb-3">Know someone entering the II? Pass it on</p>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fii2026.gazehound.io%2F" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 text-sm transition"><i class="fa-brands fa-facebook" aria-hidden="true"></i>Facebook</a>
+                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fii2026.gazehound.io%2F&amp;text=Unofficial%20guide%20to%20the%2048th%20ASFA%20International%20Invitational%20-%20Oct%2024-25%2C%202026%2C%20Vinita%20OK.%20Entries%2C%20stakes%2C%20fees%2C%20schedule%20and%20trip%20planning%20in%20one%20place." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 text-sm transition"><i class="fa-brands fa-twitter" aria-hidden="true"></i>X</a>
+                    <a href="https://wa.me/?text=Unofficial%20guide%20to%20the%2048th%20ASFA%20International%20Invitational%20-%20Oct%2024-25%2C%202026%2C%20Vinita%20OK.%20Entries%2C%20stakes%2C%20fees%2C%20schedule%20and%20trip%20planning%20in%20one%20place.%20https%3A%2F%2Fii2026.gazehound.io%2F" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 text-sm transition"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</a>
+                    <a href="mailto:?subject=Unofficial%20Guide%20-%202026%20ASFA%20International%20Invitational&amp;body=Unofficial%20guide%20to%20the%2048th%20ASFA%20International%20Invitational%20-%20Oct%2024-25%2C%202026%2C%20Vinita%20OK.%20Entries%2C%20stakes%2C%20fees%2C%20schedule%20and%20trip%20planning%20in%20one%20place.%0A%0Ahttps%3A%2F%2Fii2026.gazehound.io%2F" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 text-sm transition"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email</a>
+                    <button type="button" id="copy-link" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 text-sm transition"><i class="fa-solid fa-link" aria-hidden="true"></i><span>Copy link</span></button>
+                </div>
             </div>
             <div id="disclaimer" class="max-w-4xl mx-auto text-left text-sm leading-relaxed space-y-4 scroll-mt-28 text-white/90">
                 <p>
@@ -1266,6 +1281,33 @@
             function checkHash() { if ((location.hash || '') === '#disclaimer') open(); }
             checkHash();
             window.addEventListener('hashchange', checkHash);
+        })();
+        // Share: copy the guide's link with visible feedback
+        (function () {
+            var btn = document.getElementById('copy-link');
+            if (!btn) return;
+            var label = btn.querySelector('span');
+            var url = 'https://ii2026.gazehound.io/';
+            function done(ok) {
+                var old = label.textContent;
+                label.textContent = ok ? 'Copied!' : 'Copy failed';
+                setTimeout(function () { label.textContent = old; }, 2000);
+            }
+            btn.addEventListener('click', function () {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(url).then(function () { done(true); }, function () { done(false); });
+                } else {
+                    try {
+                        var ta = document.createElement('textarea');
+                        ta.value = url;
+                        document.body.appendChild(ta);
+                        ta.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(ta);
+                        done(true);
+                    } catch (e) { done(false); }
+                }
+            });
         })();
     </script>
 </body>
