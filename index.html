@@ -249,6 +249,11 @@
     <!-- White content panel on sand -->
     <div class="flex-1 w-full">
         <main id="main-content" class="max-w-[1160px] w-full mx-auto bg-white px-4 sm:px-8 py-8">
+        <!-- First-timers call-out — sits above whichever section is active -->
+        <div class="mb-6 bg-hc-cream border-l-4 border-hc-flame px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+            <p class="text-[15px] leading-relaxed"><strong>First time at the II?</strong> The Invitational runs differently from a regular trial — start here.</p>
+            <a href="firsttimers.html" class="font-abel uppercase tracking-wider inline-flex items-center gap-2 bg-hc-flame hover:bg-hc-flameDark text-white px-4 py-2 shadow transition whitespace-nowrap"><i class="fa-solid fa-seedling" aria-hidden="true"></i> First-Timers Guide</a>
+        </div>
         <!-- ============ TAB 1: EVENT INFO ============ -->
         <section id="info" class="guide-section" aria-labelledby="h-info">
             <h2 id="h-info" class="section-title">Event Info</h2>
@@ -796,9 +801,10 @@
                         <p class="text-xs text-hc-ink/80 mt-2">Check back after the trial on 24&ndash;25 October 2026.</p>
                     </details>
                 </div>
+                <div class="grid lg:grid-cols-2 gap-5">
                 <div class="card">
                     <h3 class="card-title"><i class="fa-solid fa-ribbon" aria-hidden="true"></i>Ribbons, Awards &amp; Prizes</h3>
-                    <div class="text-[15px] leading-relaxed grid md:grid-cols-2 gap-5">
+                    <div class="text-[15px] leading-relaxed grid sm:grid-cols-2 lg:grid-cols-1 gap-5">
                         <div>
                             <p class="font-abel text-lg text-hc-deep mb-2">Rosette Colors — Placements</p>
                             <ul class="space-y-1">
@@ -849,6 +855,7 @@
                             </table>
                         </div>
                     </div>
+                </div>
                 </div>
                 <div class="card">
                     <h3 class="card-title"><i class="fa-solid fa-medal" aria-hidden="true"></i>Additional Perpetual Trophies</h3>
