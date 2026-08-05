@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJHVL0YRRK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YJHVL0YRRK');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1A1A1A">
+    <title>First Time at the II? — 2026 ASFA International Invitational</title>
+    <meta name="description" content="Unofficial first-timer's guide to the 48th ASFA International Invitational — what makes the II different, what to expect on trial day, advice from veteran handlers, etiquette for spectators, and how to volunteer or sponsor. Not an ASFA publication.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hc: {
+                            sand: '#DED4BE',
+                            stone: '#928C7D',
+                            stoneDark: '#6B6558',
+                            cream: '#F8F4EB',
+                            ink: '#3C3C3C',
+                            deep: '#222222',
+                            blue: '#336699',
+                            flame: '#CC2900',
+                            flameDark: '#A62100',
+                            navy: '#1B3041',
+                            bar: '#1A1A1A',
+                            line: '#D8D2C2'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Icons -->
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+        h1, h2, h3, .font-abel, .sec-link { font-family: 'Abel', sans-serif; }
+        .card { background: #F8F4EB; padding: 1.25rem; }
+        .card-title {
+            font-family: 'Abel', sans-serif;
+            font-size: 1.375rem;
+            line-height: 1.2;
+            color: #222222;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.75rem;
+        }
+        .card-title i { color: #CC2900; font-size: 1rem; }
+        .sec-link {
+            white-space: nowrap;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #fff;
+            border-bottom: 3px solid transparent;
+            transition: background-color .15s, border-color .15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sec-link:hover { background: rgba(0,0,0,.25); }
+        .sec-link[aria-current="true"] { background: rgba(0,0,0,.45); border-bottom-color: #CC2900; }
+        .sec-link:focus-visible { outline: 2px solid #CC2900; outline-offset: -2px; }
+        .guide-section { scroll-margin-top: calc(var(--nav-h, 5rem) + 1rem); }
+        .guide-section + .guide-section { margin-top: 2.75rem; }
+        .section-title {
+            font-family: 'Abel', sans-serif;
+            font-size: 1.75rem;
+            color: #222222;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+            border-bottom: 3px solid #CC2900;
+        }
+        table.data { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+        table.data th, table.data td {
+            text-align: left;
+            padding: 0.55rem 0.75rem;
+            border-bottom: 1px solid #D8D2C2;
+            vertical-align: top;
+        }
+        table.data thead th {
+            background: #6B6558;
+            color: #fff;
+            font-family: 'Abel', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        table.data tbody td { background: #fff; }
+        table.data tbody tr:nth-child(even) td { background: #FCFAF4; }
+        table.data tbody tr:last-child td { border-bottom: none; }
+        .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .disclosure > summary {
+            cursor: pointer;
+            list-style: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .disclosure > summary::-webkit-details-marker { display: none; }
+        .disclosure > summary .chev { transition: transform .2s ease; }
+        .disclosure[open] > summary .chev { transform: rotate(180deg); }
+        @media print {
+            .print\:hidden { display: none !important; }
+            .section-title { break-after: avoid; color: #000; border-bottom-color: #000; }
+            .guide-section { break-inside: auto; }
+            #unofficial-banner, #unofficial-banner a,
+            header, header *,
+            footer, footer * { color: #000 !important; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto !important; }
+            .sec-link, .transition, .disclosure > summary .chev { transition: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-hc-sand text-hc-ink antialiased flex flex-col min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-white focus:text-hc-deep focus:font-semibold focus:px-4 focus:py-2 focus:outline focus:outline-2 focus:outline-hc-flame">Skip to content</a>
+
+    <div id="unofficial-banner" class="bg-hc-flame text-white text-center text-sm font-semibold px-4 py-2">
+        <i class="fa-solid fa-circle-info mr-1.5" aria-hidden="true"></i>Unofficial community guide — not an ASFA publication.
+        Official premium list and entries at <a href="https://www.asfa.org" class="underline hover:text-hc-cream">asfa.org</a>.
+        <a href="#disclaimer" class="underline hover:text-hc-cream whitespace-nowrap">Full disclaimer</a>
+    </div>
+
+    <div class="bg-hc-bar text-white print:hidden">
+        <div class="max-w-[1000px] mx-auto px-4 py-3 text-center">
+            <a href="https://www.asfa.org" class="font-abel uppercase tracking-[0.35em] text-lg hover:text-hc-sand transition">ASFA.org</a>
+        </div>
+    </div>
+
+    <header class="bg-hc-navy text-white">
+        <div class="max-w-[1000px] mx-auto px-4 py-12 sm:py-16 text-center">
+            <p class="font-abel uppercase tracking-[0.25em] text-hc-cream text-sm mb-3">Unofficial Entrant's Guide · 48th ASFA International Invitational</p>
+            <h1 class="text-3xl sm:text-4xl leading-tight">First Time at the II?</h1>
+            <p class="mt-4 text-lg max-w-2xl mx-auto">You have coursed before — but the International Invitational is a different weekend. Here is what to expect at Couch Ranch on 24–25 October 2026, and how to be part of making it happen.</p>
+            <div class="mt-7 flex flex-wrap gap-3 justify-center">
+                <a href="index.html" class="font-abel uppercase tracking-wider inline-flex items-center gap-2 bg-white text-hc-blue hover:bg-hc-cream px-5 py-2.5 shadow transition">
+                    <i class="fa-solid fa-book-open" aria-hidden="true"></i> Full event guide
+                </a>
+                <a href="https://form.jotform.com/261315749736162" target="_blank" rel="noopener noreferrer" class="font-abel uppercase tracking-wider inline-flex items-center gap-2 bg-hc-flame hover:bg-hc-flameDark text-white px-5 py-2.5 shadow transition">
+                    <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Enter Online
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav id="sec-nav" aria-label="Page sections" class="bg-hc-stoneDark sm:sticky top-0 z-40 shadow print:hidden">
+        <div class="max-w-[1000px] mx-auto px-3 sm:px-2">
+            <div class="flex flex-wrap">
+                <a class="sec-link" href="#different"  data-section="different"><i class="fa-solid fa-star" aria-hidden="true"></i>What's Different</a>
+                <a class="sec-link" href="#know"       data-section="know"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>Before You Go</a>
+                <a class="sec-link" href="#day"        data-section="day"><i class="fa-regular fa-sun" aria-hidden="true"></i>Trial Day</a>
+                <a class="sec-link" href="#advice"     data-section="advice"><i class="fa-regular fa-comment-dots" aria-hidden="true"></i>Advice</a>
+                <a class="sec-link" href="#guests"     data-section="guests"><i class="fa-solid fa-people-group" aria-hidden="true"></i>Guests</a>
+                <a class="sec-link" href="#volunteer"  data-section="volunteer"><i class="fa-solid fa-hands-helping" aria-hidden="true"></i>Volunteer</a>
+                <a class="sec-link" href="#sponsor"    data-section="sponsor"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>Sponsor</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-1 w-full">
+    <main id="main-content" class="max-w-[1000px] w-full mx-auto bg-white px-4 sm:px-8 py-8">
+
+        <!-- ============ WHAT'S DIFFERENT ============ -->
+        <section id="different" class="guide-section" aria-labelledby="h-different">
+            <h2 id="h-different" class="section-title">The II is not just another trial</h2>
+            <div class="space-y-5">
+                <p class="text-[15px] leading-relaxed">The International Invitational is the sport's annual gathering — 2026 is its <strong>48th</strong> running. Every hound on the field qualified to be there: at least 20 lifetime ASFA points, a Field Championship of record elsewhere, or a placement at a Regional Invitational. Seventeen regular breeds plus Provisional, Singles and LCI run across <strong>two fields over two days</strong>, and perpetual trophies are handed on year after year.</p>
+                <div class="card border-l-4 border-hc-flame">
+                    <h3 class="card-title"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>How do I know how many points my hound has?</h3>
+                    <p class="text-[15px] leading-relaxed"><strong>ASFA hound records are not publicly available</strong> — there is no online lookup for your hound's lifetime points. <strong>Email the ASFA Records Coordinator</strong> for your hound's record; contact details are on the <a href="https://www.asfa.org/trial/index0111.html" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">ASFA trial results page</a>.</p>
+                    <p class="text-[15px] leading-relaxed mt-2"><strong class="text-hc-flame">Ask early.</strong> Entries close <strong>25 September 2026</strong> and eligibility must be met before then — do not assume the points are there.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-layer-group" aria-hidden="true"></i>Flights</h3>
+                        <p class="text-[15px] leading-relaxed">If any one stake has <strong>20 or more hounds</strong> entered, it is split into flights. The tentative flight draw is held <strong>in public view at 5:30 PM Friday at the field</strong>; the official draw follows roll call each morning, once scratches are known. Whether your breed is flighted depends on its entry numbers.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>Fields rotate</h3>
+                        <p class="text-[15px] leading-relaxed">Your breed runs one field on Saturday and the other on Sunday — Field A is 940 yards, Field B is 763. Check the field assignments in the <a href="index.html#schedule" class="text-hc-blue hover:underline">full guide</a> so you set up camp on the right side.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-star" aria-hidden="true"></i>The Gillette — Saturday</h3>
+                        <p class="text-[15px] leading-relaxed">A stake you will only see here: the top-scoring hound in each breed that is both a bench champion and an ASFA Field Champion runs for the Gillette Memorial Trophy on Field B. No extra fee — but it needs its own entry form, in advance.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-crown" aria-hidden="true"></i>Best in II — Sunday</h3>
+                        <p class="text-[15px] leading-relaxed">All Best of Breed winners from both days who qualified both days meet on Field A at 1,110 yards. The winner takes the President's Cup and is credited with a Best in Field.</p>
+                    </div>
+                </div>
+                <p class="text-[15px] leading-relaxed">And it is social in a way a one-day local trial cannot be: an informal get-together Friday night (bring snacks and beverages to share), a food truck on the field, and the <strong>Awards Banquet Saturday evening</strong> — pre-reserved, $30, served about 45 minutes after ribbons.</p>
+            </div>
+        </section>
+
+        <!-- ============ KNOW BEFORE YOU GO ============ -->
+        <section id="know" class="guide-section" aria-labelledby="h-know">
+            <h2 id="h-know" class="section-title">Know before you go</h2>
+            <div class="space-y-5">
+                <div class="card border-l-4 border-hc-flame">
+                    <h3 class="card-title"><i class="fa-regular fa-clock" aria-hidden="true"></i>The morning is early and strict</h3>
+                    <p class="text-[15px] leading-relaxed">Trial hours start <strong>5:30 AM Central</strong>. Roll call and inspection are <strong>promptly at 6:00 AM — all dogs, no exceptions</strong> — and hounds not present are scratched after a five-minute grace period. Plan your morning backwards from 6:00, in the dark, with coffee.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-campground" aria-hidden="true"></i>Camping is dry</h3>
+                        <p class="text-[15px] leading-relaxed">On-site camping has <strong>no hookups, no water, no campfires</strong>. $75 for any motorized vehicle, $25 for a tent, for the weekend — reserved and paid with your entries. Sites open <strong>noon Friday</strong>; plan to arrive after that. Hotels and RV parks with hookups are listed in the <a href="index.html#logistics" class="text-hc-blue hover:underline">full guide</a>.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i>Field conditions</h3>
+                        <p class="text-[15px] leading-relaxed">Average high around <strong>68°F</strong>, natural vegetation, October in Oklahoma — pack for cold dark mornings and warm afternoons. <strong>Practice will not be offered</strong>, so do not plan on a warm-up run.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-utensils" aria-hidden="true"></i>Food needs planning</h3>
+                        <p class="text-[15px] leading-relaxed">Breakfast is on the field from the food truck ($8–$10). But <strong>lunch and the banquet are pre-order only</strong> — $15 and $30, reserved with your entries. If you did not pre-order, bring your own lunch.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-car-side" aria-hidden="true"></i>Golf carts pre-reserve</h3>
+                        <p class="text-[15px] leading-relaxed">Carts are $125 for the weekend and <strong>must be reserved in advance</strong> with a signed rental agreement — pickup Friday evening, return late Sunday afternoon. None are available on the day.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-shield-dog" aria-hidden="true"></i>Rules that catch people out</h3>
+                    <ul class="list-disc pl-5 space-y-1.5 text-[15px] leading-relaxed">
+                        <li><strong>$5 fine</strong> for any loose hound on the field not taking part in a course in progress.</li>
+                        <li><strong>$10 fine</strong> for not picking up after your own dog(s).</li>
+                        <li><strong>No one on the field</strong> except Field Committee members without the Field Trial Chairman's express permission.</li>
+                        <li>Bitches in season and lame hounds at inspection are excused with entry fees refunded — tell the Field Trial Secretary before the close of roll call.</li>
+                        <li>Muzzles are not required. Spayed, neutered, monorchid and cryptorchid hounds may run.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ A DAY AT THE II ============ -->
+        <section id="day" class="guide-section" aria-labelledby="h-day">
+            <h2 id="h-day" class="section-title">A day at the II</h2>
+            <div class="table-scroll">
+                <table class="data">
+                    <thead><tr><th>When</th><th>What happens</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>5:30 AM</strong></td><td>Trial hours begin. Workers' hounds are accepted for early inspection from half an hour before roll call.</td></tr>
+                        <tr><td><strong>6:00 AM</strong></td><td>Roll call and inspection — all dogs, no exceptions.</td></tr>
+                        <tr><td><strong>Prelims</strong></td><td>Every hound runs twice in the trial — in trios where possible, or braces. Singles and LCI run alone.</td></tr>
+                        <tr><td><strong>Finals</strong></td><td>The course is reversed for finals and run-offs at the judges' discretion — then Best of Breed for each breed, each day.</td></tr>
+                        <tr><td><strong>Saturday feature</strong></td><td>The Gillette Stake on Field B.</td></tr>
+                        <tr><td><strong>Sunday feature</strong></td><td>Best in International Invitational on Field A at 1,110 yards.</td></tr>
+                        <tr><td><strong>After ribbons</strong></td><td>Saturday: the Awards Banquet at the field, about 45 minutes after ribbons. Sunday: safe travels home.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-[15px] leading-relaxed mt-4">Running order is determined after entries close, and stakes run until completion — a two-field, full-entry day is long. Bring shade, water, chairs, and more patience than you think your hound needs.</p>
+        </section>
+
+        <!-- ============ VETERANS' ADVICE ============ -->
+        <section id="advice" class="guide-section" aria-labelledby="h-advice">
+            <h2 id="h-advice" class="section-title">Advice from people who have been there</h2>
+            <div class="space-y-5">
+                <p class="text-[15px] leading-relaxed">We asked experienced handlers across the lure coursing community one question: <em>what is the one piece of advice you would give a first-timer at the II?</em> The answers below are theirs — some drawn from thirty years of IIs — grouped and condensed with thanks.</p>
+
+                <div class="card border-l-4 border-hc-flame">
+                    <h3 class="card-title"><i class="fa-solid fa-heart" aria-hidden="true"></i>Your hound comes first</h3>
+                    <ul class="list-disc pl-5 space-y-1.5 text-[15px] leading-relaxed">
+                        <li><strong>Condition your hound well before the event</strong>, and know its limits on the day.</li>
+                        <li>If your hound seems sore or tired, <strong>pull it</strong>. Better to scratch over something minor than risk an injury on the next run — <em>there will always be another meet</em>.</li>
+                        <li>Keep the water going all day, at both ends of the lead.</li>
+                        <li>Do not leave a dog loose in a vehicle.</li>
+                        <li>Some hounds wind themselves up within sight and sound of the field — if yours does, park farther out.</li>
+                        <li>Paw wax on the pads before running — Musher's Secret is the community favourite.</li>
+                    </ul>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-regular fa-face-smile" aria-hidden="true"></i>Run your dog, not the rosettes</h3>
+                        <ul class="list-disc pl-5 space-y-1.5 text-[15px] leading-relaxed">
+                            <li>It is about having fun with your dog and seeing every hound finish safe. Be present — win or not, the memories are the point.</li>
+                            <li>You will win some your dog did not deserve and lose some it should have won. It evens out in the long run; stick with it.</li>
+                            <li>Your mood travels down the lead. If you are not having fun, your hound probably will not have its best day either.</li>
+                            <li>Be a good sport — say congratulations, and mean it. And be forgiving of the trial crew: nobody out there is a professional, and they are working hard to make it a great event.</li>
+                            <li>Say thank you all day — to the crew, to whoever holds your dog, to the vendors. It lightens your mood along with theirs.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-list-ol" aria-hidden="true"></i>Own the running order</h3>
+                        <ul class="list-disc pl-5 space-y-1.5 text-[15px] leading-relaxed">
+                            <li>Photograph the draw — your page <strong>and the page before yours</strong>.</li>
+                            <li>The breed before yours is your cue: that is when to pull your dog out, dress and start the warm-up.</li>
+                            <li>As you dress, check the photo one more time — <strong>blanket colour and flight</strong>.</li>
+                            <li>Running hounds back to back? Arrange a hand-off person for <strong>each flight</strong>, and check in with them as your turn nears.</li>
+                            <li>Know when you are on deck or in the hole — there is plenty of time to socialise later. If you are not where you are supposed to be, your hound misses its chance to shine.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-suitcase" aria-hidden="true"></i>Pack for four seasons</h3>
+                        <ul class="list-disc pl-5 space-y-1.5 text-[15px] leading-relaxed">
+                            <li>Hot gear, cold gear, rain gear — October does what it likes. One veteran packs <em>three</em> sets of rain gear.</li>
+                            <li>Equipment fails: bring spares of anything you cannot run without.</li>
+                            <li>Sunscreen, an extra pair of shoes, and more food and water than you think the day needs.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-regular fa-handshake" aria-hidden="true"></i>You are among friends</h3>
+                        <ul class="list-disc pl-5 space-y-1.5 text-[15px] leading-relaxed">
+                            <li>Be at roll call and the handlers meeting, and <strong>introduce yourself as a first-timer</strong>.</li>
+                            <li>Do not be shy — ask questions. Everyone out there was new once, and if an answer comes back short, it is a busy day, not a brush-off.</li>
+                            <li>Make friends in breeds besides your own. It gives you more dogs to root for.</li>
+                            <li>Really new? Contact your <strong>Regional Director</strong> before the trial — they will know who from your region is going and can connect you.</li>
+                            <li>If you see someone who needs a hand, offer yours.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-toilet-paper" aria-hidden="true"></i>The poop-bag protocol</h3>
+                    <ul class="list-disc pl-5 space-y-1.5 text-[15px] leading-relaxed">
+                        <li>Bags in every pocket — dogs go when least expected, and the $10 fine above is real.</li>
+                        <li>On your way to the line when your dog goes? Toss your bag roll down beside it — the universal signal for <em>"I am coming back"</em> — run your dog, then collect both. A bag roll is far easier to spot than the alternative.</li>
+                        <li>Being on the way to the line defers the pickup; it does not exempt you. And bags never go in the port-a-potty.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GUESTS ============ -->
+        <section id="guests" class="guide-section" aria-labelledby="h-guests">
+            <h2 id="h-guests" class="section-title">Bringing family &amp; friends</h2>
+            <div class="space-y-5">
+                <p class="text-[15px] leading-relaxed">The II is a wonderful first lure coursing event for the people in your life — two days of sighthounds at full stretch is its own argument for the sport. A few things will make their day easy:</p>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-binoculars" aria-hidden="true"></i>Watching well</h3>
+                        <ul class="list-disc pl-5 space-y-1.5 text-[15px] leading-relaxed">
+                            <li>Stay off the field — it is Field Committee only, without the Field Trial Chairman's express permission.</li>
+                            <li>Keep dogs leashed and well back from the line — a loose dog on the field draws a $5 fine.</li>
+                            <li>Exhibitors are responsible for their children's behaviour, per the premium — the lure line is genuinely dangerous to small fast-moving people.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-camera" aria-hidden="true"></i>Photos</h3>
+                        <p class="text-[15px] leading-relaxed"><strong>Kara Hamilton</strong> and <strong>Allison Shore</strong> are the only photographers allowed on the fields — each will have information at the trial on obtaining photos of your hounds. Everyone else photographs from the gallery.</p>
+                    </div>
+                </div>
+                <p class="text-[15px] leading-relaxed">Guests eat the same way you do: food-truck breakfast on the field, but lunch is pre-order only — order theirs with your entries or bring food for them. Banquet seats ($30) are pre-reserved too and guests are welcome.</p>
+            </div>
+        </section>
+
+        <!-- ============ VOLUNTEER ============ -->
+        <section id="volunteer" class="guide-section" aria-labelledby="h-volunteer">
+            <h2 id="h-volunteer" class="section-title">Get involved — volunteer</h2>
+            <div class="space-y-5">
+                <p class="text-[15px] leading-relaxed">A two-field, two-day trial takes a lot of hands — the premium names a Head Huntmaster and four Lure Operators, and roll call, inspection and the two fields all have to be staffed. One line in the premium shows workers are expected and accommodated: <strong>workers' hounds are accepted for early inspection</strong>, beginning half an hour before roll call, so helping need not cost you your own hound's morning.</p>
+                <div class="card border-l-4 border-hc-flame">
+                    <h3 class="card-title"><i class="fa-solid fa-hands-helping" aria-hidden="true"></i>How to offer</h3>
+                    <p class="text-[15px] leading-relaxed">Worth being straight about this: <strong>the premium does not publish a volunteer sign-up</strong> — there is no form, and no volunteer coordinator is named. The only mention of volunteers is the planning committee thanking its own.</p>
+                    <p class="text-[15px] leading-relaxed mt-2">So ask. The Field Trial Chair, <strong>Scott Hurlbert</strong>, runs the field and is the natural person to offer help to; his mobile number is in the premium and in the <a href="index.html#info" class="text-hc-blue hover:underline">full guide</a> under Key Contacts. Ask what is actually needed rather than assuming — the crew is already organised and what helps most will depend on the day.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SPONSOR ============ -->
+        <section id="sponsor" class="guide-section" aria-labelledby="h-sponsor">
+            <h2 id="h-sponsor" class="section-title">Get involved — sponsor &amp; donate</h2>
+            <div class="space-y-5">
+                <p class="text-[15px] leading-relaxed">The premium's own invitation: gain recognition for yourself and your breed by sponsoring II trophies. Every sponsor and general-fund donor is listed in the catalogue.</p>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-trophy" aria-hidden="true"></i>Sponsor a trophy</h3>
+                        <div class="table-scroll">
+                            <table class="data">
+                                <tbody>
+                                    <tr><td>Best of Breed</td><td>$50</td></tr>
+                                    <tr><td>Stake Winner</td><td>$35</td></tr>
+                                    <tr><td>Flight Winner</td><td>$25</td></tr>
+                                    <tr><td>Kennel · Breeder · Generation · Bench · LCI</td><td>$25</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>General fund</h3>
+                        <div class="table-scroll">
+                            <table class="data">
+                                <tbody>
+                                    <tr><td>Silver</td><td>$10–$25</td></tr>
+                                    <tr><td>Gold</td><td>$26–$50</td></tr>
+                                    <tr><td>Platinum</td><td>$51–$99</td></tr>
+                                    <tr><td>Diamond</td><td>$100+</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-gift" aria-hidden="true"></i>Raffle baskets</h3>
+                    <p class="text-[15px] leading-relaxed">Clubs are invited to put together a basket reflecting their state or region — individuals are welcome too. Proceeds help defray the cost of the event. Contact <strong>Gina Whritenour</strong> at <a href="mailto:Reg9Dir@asfa.org" class="text-hc-blue hover:underline">Reg9Dir@asfa.org</a> (Eastern time zone) with what you are donating and its approximate value.</p>
+                </div>
+                <p class="text-[15px] leading-relaxed"><strong>All sponsorships and donations must be received by 25 September 2026</strong> — add them when you <a href="https://form.jotform.com/261315749736162" target="_blank" rel="noopener noreferrer" class="text-hc-blue hover:underline">enter online</a>. Fee details and catalogue advertising ($25–$100, same deadline) are in the <a href="index.html#awards" class="text-hc-blue hover:underline">full guide</a>.</p>
+            </div>
+        </section>
+
+    </main>
+    </div>
+
+    <footer class="bg-hc-navy text-white py-10 mt-auto">
+        <div class="max-w-[1000px] mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-center gap-5 text-sm mb-8 print:hidden">
+                <a href="index.html" class="font-abel uppercase tracking-wider hover:text-hc-sand transition inline-flex items-center gap-2"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Full Event Guide</a>
+                <a href="https://www.asfa.org" class="font-abel uppercase tracking-wider hover:text-hc-sand transition inline-flex items-center gap-2"><i class="fa-solid fa-house" aria-hidden="true"></i> ASFA.org</a>
+                <a href="https://www.facebook.com/groups/1046065245418921" target="_blank" rel="noopener noreferrer" class="font-abel uppercase tracking-wider hover:text-hc-sand transition inline-flex items-center gap-2"><i class="fa-brands fa-facebook" aria-hidden="true"></i> II Facebook</a>
+            </div>
+            <div id="disclaimer" class="max-w-4xl mx-auto text-left text-sm leading-relaxed space-y-4 scroll-mt-28 text-white/90">
+                <p>
+                    <strong class="text-white">Disclaimer.</strong> This is an independent, unofficial entrant's guide created and maintained by lure coursing enthusiasts. It is not authorized, approved, or endorsed by the American Sighthound Field Association (ASFA), and the official ASFA premium always governs. It summarizes the official premium list for the 48th ASFA International Invitational published at <a href="https://www.asfa.org" target="_blank" rel="noopener noreferrer" class="underline hover:text-hc-sand">asfa.org</a>.
+                </p>
+                <details class="disclosure">
+                    <summary class="text-white font-semibold underline hover:text-hc-sand">Read the full disclaimer <i class="fa-solid fa-chevron-down chev text-[10px]" aria-hidden="true"></i></summary>
+                    <div class="mt-4 space-y-3 text-xs">
+                        <p><strong class="text-white">What this is.</strong> A free community resource presenting the ASFA International Invitational premium list information in a mobile-friendly, easy-to-use format, so entrants can review event details comfortably from any device. It is not an official ASFA publication, software product, or service. The International Invitational is an ASFA-sanctioned event; the official premium list and entry materials are published by ASFA at <a href="https://www.asfa.org" target="_blank" rel="noopener noreferrer" class="underline hover:text-hc-sand">asfa.org</a>.</p>
+                        <p><strong class="text-white">A summary, not a reproduction.</strong> The content here is condensed and reorganized from the official premium; summarizing can introduce errors or omissions, and the premium contains material not repeated on this page (complete entry forms, waivers and full rules text). The people named on this page are ASFA officials and event volunteers listed in the official premium — they are not the operators of this site.</p>
+                        <p><strong class="text-white">Verify before you enter.</strong> You are responsible for verifying all dates, deadlines, fees, eligibility requirements, forms and reservations against the official premium and current ASFA rules. Where anything shown here disagrees with official ASFA rules, forms or publications, the official ASFA materials govern.</p>
+                        <p><strong class="text-white">No warranty.</strong> This guide is provided “as is”, without warranty of any kind, express or implied. In the event of any discrepancy between this guide and the official ASFA premium, the official ASFA premium shall govern.</p>
+                    </div>
+                </details>
+                <p class="text-xs text-white/70 pt-3 border-t border-white/10 text-center">Page last updated 26 July 2026 · Spotted an error or something out of date? <a href="mailto:info@gazehound.io" class="underline hover:text-hc-sand">info@gazehound.io</a> · <a href="https://github.com/jackrabbit-project/ii2026guide" target="_blank" rel="noopener noreferrer" class="underline hover:text-hc-sand whitespace-nowrap"><i class="fa-brands fa-github mr-1" aria-hidden="true"></i>View source or report an issue</a> · <a href="https://github.com/jackrabbit-project/jackrabbit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 hover:text-hc-sand whitespace-nowrap align-middle"><img src="assets/jackrabbit-icon-40.png" alt="" class="h-4 w-auto inline-block" aria-hidden="true">The Jackrabbit Project</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Section navigation: highlight whichever section is in view.
+        (function () {
+            var links = Array.prototype.slice.call(document.querySelectorAll('.sec-link'));
+            var nav = document.getElementById('sec-nav');
+            var sections = links
+                .map(function (l) { return document.getElementById(l.getAttribute('data-section')); })
+                .filter(Boolean);
+            if (!sections.length) return;
+
+            function syncNavHeight() {
+                if (nav) document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+            }
+            syncNavHeight();
+            window.addEventListener('resize', syncNavHeight);
+
+            function setCurrent(id) {
+                links.forEach(function (l) {
+                    if (l.getAttribute('data-section') === id) l.setAttribute('aria-current', 'true');
+                    else l.removeAttribute('aria-current');
+                });
+            }
+            function updateCurrent() {
+                var line = window.scrollY + (nav ? nav.offsetHeight : 0) + 24;
+                var current = sections[0].id;
+                sections.forEach(function (s) { if (s.offsetTop <= line) current = s.id; });
+                if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
+                    current = sections[sections.length - 1].id;
+                }
+                setCurrent(current);
+            }
+            window.addEventListener('scroll', updateCurrent, { passive: true });
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(updateCurrent, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+                sections.forEach(function (s) { io.observe(s); });
+            }
+            links.forEach(function (l) {
+                l.addEventListener('click', function () { setCurrent(l.getAttribute('data-section')); });
+            });
+            updateCurrent();
+        })();
+        // Open every disclosure for printing; open the disclaimer when linked to.
+        (function () {
+            window.addEventListener('beforeprint', function () {
+                document.querySelectorAll('.disclosure').forEach(function (d) { d.open = true; });
+            });
+            var details = document.querySelector('#disclaimer details');
+            if (!details) return;
+            function open() { details.open = true; }
+            document.querySelectorAll('a[href="#disclaimer"]').forEach(function (a) {
+                a.addEventListener('click', open);
+            });
+            if ((location.hash || '') === '#disclaimer') open();
+            window.addEventListener('hashchange', function () {
+                if ((location.hash || '') === '#disclaimer') open();
+            });
+        })();
+    </script>
+</body>
+</html>
