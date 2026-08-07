@@ -9,12 +9,18 @@ It reorganizes the official ASFA premium list into seven tabbed sections — eve
 ## Layout
 
 ```
-index.html     The entire guide — markup, styles, and scripts in one file
-assets/        Hero photograph, favicons, and page artwork
-favicon.ico    Copy of assets/favicon.ico, for clients that request /favicon.ico directly
+index.html        The guide — markup and scripts, styled by css/site.css
+firsttimers.html  First-timers guide: what to expect, advice, volunteering
+404.html          Not-found page (static, absolute paths)
+css/site.css      Shared stylesheet — design tokens (light + dark), components
+assets/           Hero photograph, favicons, partner logos, page artwork
+assets/fonts/     Self-hosted webfonts (Fraunces, IBM Plex Mono — OFL)
+favicon.ico       Copy of assets/favicon.ico, for clients that request /favicon.ico directly
 ```
 
-There is no build step, package manager, or framework. Tailwind CSS and Font Awesome load from CDNs; the Abel webfont loads from Google Fonts. Everything else is plain HTML, CSS, and vanilla JavaScript.
+There is no build step, package manager, or framework — plain HTML, hand-written CSS, and vanilla JavaScript. Fonts are self-hosted and icons are inline SVG, so pages make no third-party requests apart from Google Analytics. The design language (warm paper tokens, Fraunces display serif, IBM Plex Mono labels, automatic dark mode) is shared with stats.gazehound.io.
+
+Stylesheet links carry a `?v=YYYYMMDD` query. The host caches CSS for hours while HTML revalidates on deploy, so bump the date whenever HTML and CSS change together.
 
 ## Accuracy and content sources
 

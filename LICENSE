@@ -47,3 +47,14 @@ following, which are included under separate terms:
    Jackrabbit Project logo, a brand mark of the project maintainer. They are
    included to identify this project. Nothing in the MIT license above grants
    rights to use that mark for other purposes.
+
+4. WEBFONTS — the files in "assets/fonts/" are the Fraunces typeface
+   (Copyright 2019 The Fraunces Project Authors) and the IBM Plex Mono
+   typeface (Copyright 2017 IBM Corp.), each licensed under the SIL Open
+   Font License, Version 1.1 (https://openfontlicense.org), not the MIT
+   license above.
+
+5. PARTNER LOGOS — "assets/kara-hamilton-logo.jpg" and
+   "assets/oddpaw-studio-logo.jpg" are the marks of the event's official
+   photographers and are shown to identify them. They are NOT licensed
+   under the MIT license above.
